@@ -50,7 +50,7 @@ products.map((el) => {
 
                         <div class="p-[8px] w-full">
                             <div class="flex justify-between">
-                                <h1 class="text-[18px] font-[700]">599,99 ₽</h1>
+                                <h1 class="text-[18px] font-[700]">${el.price} ₽</h1>
 
                             </div>
                             <div class="flex justify-between invisible">

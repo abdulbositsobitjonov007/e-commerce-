@@ -57,8 +57,7 @@ products.map((el) => {
                                 <p class="text-[#BFBFBF] text-[12px] font-[400]">С картой</p>
                                 <p class="text-[#BFBFBF] text-[12px] font-[400]">Обычная</p>
                             </div>
-                            <p class="text-[17px] font-[400] font-rubik pt-[5px] pb-[5px] line-clamp-2">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ
-                                GS12»</p>
+                            <p class="text-[17px] font-[400] font-rubik pt-[5px] pb-[5px] line-clamp-2">${el.description}</p>
                             <span class="flex pb-[10px] space-x-1"><img style="width: 16px; height: 16px;" src="./assets/images/star.svg"
                                     alt=""><img style="width: 16px; height: 16px;" src="./assets/images/star.svg" alt=""><img
                                     style="width: 16px; height: 16px;" src="./assets/images/empty-star.svg" alt=""><img

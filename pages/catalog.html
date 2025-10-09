@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+    <header class="py-[11px] px-[20px] bg-[white] border-b-[3px] border-[#E8E2C8] fixed w-full top-[0] z-[2]">
+        <div class="container mx-auto flex justify-between items-center gap-[16px]">
+            <a class="flex gap-[11px]" href="../index.html"><img class="max-w-[39px] w-full h-[32px]" src="../assets/images/logo1.svg"
+                    alt="logo">
+                <p class="hidden sm:flex">СЕВЕРЯНОЧКА</p>
+            </a>
+            <button
+                class="hidden sm:flex gap-[15px] bg-[#70C05B] max-w-[40px] 2xl:max-w-[140px] xl:max-w-[140px] md:max-w-[140px] lg:max-w-[40px] w-full h-[40px] cursor-pointer items-center p-[8px] text-[white] rounded-[8px]"><img
+                    src="../assets/images/menu.svg" alt="">
+                <p class="hidden md:flex lg:hidden xl:flex">Каталог</p>
+            </button>
+            <form>
+                <div class="flex">
+                    <input
+                        class="w-[220px] sm:w-[280px] xl:w-[336px] h-[40px] rounded-l-[8px] border-[2px] border-solid border-[#70C05B] px-[16px] outline-neutral-500 border-r-0 border-r-transparent "
+                        type="search" name="" placeholder="Найти товар" id="">
+                    <button
+                        class="w-[40px] h-[40px] rounded-r-[8px] border-[2px] border-green-500 outline-neutral-500 border-l-0 pl-[7px] cursor-pointer"><img
+                            src="../assets/images/search.svg" alt=""></button>
+                </div>
+            </form>
+            <ul class="flex gap-[24px] hidden lg:flex">
+                <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center" href="../pages/favourites.html"><img
+                            src="../assets/images/favourites.svg" alt="">Избранное</a></li>
+                <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center" href="../pages/all_products.html"><img
+                            src="../assets/images/products.svg" alt="">Продукты</a></li>
+                <li class="place-items-center"><a class="flex flex-col items-center" href="../pages/basket.html"><img
+                            src="../assets/images/shop.svg" alt="">Корзина</a></li>
+            </ul>
+            <div class="hidden sm:flex items-center gap-[10px]">
+                <img class="w-[40px] h-[40px]" src="../assets/images/avatar.png" alt="">
+                <h1 class="pr-[15px] hidden lg:flex">Алексей</h1>
+                <img src="../assets/images/arrow down.svg" alt="">
+            </div>
+    
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-[#FBF8EC] px-[20px] pt-[94px] pb-[120px]">
+            <div class="container mx-auto">
+                <div class="flex items-center gap-[16px]"><a class="text-[12px] font-[400]" href="../index.html">Главная</a><img src="../assets/images/chevron-right.svg" alt=""><a class="text-[12px] font-[400]">Каталог</a></div>
+                <h1 class="text-[46px] lg:text-[64px] font-[700] pt-[30px] pb-[40px]">Каталог</h1>
+
+                <div class="flex flex-col gap-[40px]">
+
+                <div class="flex gap-[40px]">
+                    <div class="relative cursor-pointer"><a href="../pages/categories.html">
+                        <img src="../assets/images/milk-cheese-egg.png" alt="">
+                        <div class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
+                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Молоко, сыр, яйцо</p>
+                        </div></a>
+                    </div>
+                    <div class="relative cursor-pointer">
+                        <a href="../pages/categories.html">
+                        <img src="../assets/images/bread.png" alt="">
+                        <div
+                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
+                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Хлеб</p>
+                        </div></a>
+                    </div>
+                    <div class="relative cursor-pointer">
+                        <a href="../pages/categories.html">
+                        <img src="../assets/images/fruits-vegetables.png" alt="">
+                        <div
+                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
+                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Фрукты и овощи</p>
+                        </div></a>
+                    </div>
+                </div>
+
+                <div class="flex gap-[40px]">
+                    <div class="relative cursor-pointer">
+                        <a href="../pages/categories.html">
+                        <img src="../assets/images/frozen-products.png" alt="">
+                        <div
+                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
+                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Замороженные продукты</p>
+                        </div></a>
+                    </div>
+                    <div class="relative cursor-pointer">
+                        <a href="../pages/categories.html">
+                        <img src="../assets/images/bevereges.png" alt="">
+                        <div
+                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
+                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Напитки</p>
+                        </div></a>
+                    </div>
+                    <div class="relative cursor-pointer">
+                        <a href="../pages/categories.html">
+                        <img src="../assets/images/candies.png" alt="">
+                        <div
+                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
+                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Кондитерские изделия</p>
+                        </div></a>
+                    </div>
+                    <div class="relative cursor-pointer">
+                        <a href="../pages/categories.html">
+                        <img src="../assets/images/tea-coffee.png" alt="">
+                        <div
+                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
+                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Чай, кофе</p>
+                        </div></a>
+                    </div>
+                </div>
+                
+                <div class="flex gap-[40px]">
+                    <div class="relative cursor-pointer">
+                        <a href="../pages/categories.html">
+                        <img src="../assets/images/floured-products.png" alt="">
+                        <div
+                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
+                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Бакалея</p>
+                        </div></a>
+                    </div>
+                    <div class="relative cursor-pointer">
+                        <a href="../pages/categories.html">
+                        <img src="../assets/images/healthy-consumption.png" alt="">
+                        <div
+                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
+                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Здоровое питание</p>
+                        </div></a>
+                    </div>
+                    <div class="relative cursor-pointer">
+                        <a href="../pages/categories.html">
+                        <img src="../assets/images/zoo-products.png" alt="">
+                        <div
+                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
+                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Зоотовары</p>
+                        </div></a>
+                    </div>
+                </div>
+
+                <div class="flex gap-[40px]">
+                    <div class="relative cursor-pointer">
+                        <a href="../pages/categories.html">
+                        <img src="../assets/images/children-products.png" alt="">
+                        <div
+                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
+                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Детское питание</p>
+                        </div></a>
+                    </div>
+                    <div class="relative cursor-pointer">
+                        <a href="../pages/categories.html">
+                        <img src="../assets/images/meat-bird-sausage.png" alt="">
+                        <div
+                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
+                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Мясо, птица, колбаса</p>
+                        </div></a>
+                    </div>
+                    <div class="relative cursor-pointer">
+                        <a href="../pages/categories.html">
+                        <img src="../assets/images/house-products.png" alt="">
+                        <div
+                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
+                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Непродовольственные товары</p>
+                        </div></a>
+                    </div>
+                </div>
+
+                </div>
+                
+
+            </div>
+        </section>
+    </main>
+
+    <footer class=" pt-[24px] pb-[58px] bg-[#FBe8c9] px-[20px]">
+        <div class="container mx-auto flex justify-between ">
+    
+            <div class="flex flex-col md:flex-row items-center gap-[20px] block">
+                <div class="flex justify-self-start"><a href=""><img src="../assets/images/logo.svg" alt=""></a></div>
+    
+                <div class="flex gap-[20px] flex-wrap">
+                    <a class="text-[12px] flex white-space" href="../pages/about_us.html">О компании</a>
+                    <a class="text-[12px]" href="../pages/contacts.html">Контакты</a>
+                    <a class="text-[12px]" href="../pages/vacancies.html">Вакансии</a>
+                    <a class="text-[12px]" href="">Статьи</a>
+                    <a class="text-[12px]" href="">Политика обработки персональных данных</a>
+                </div>
+    
+            </div>
+    
+            <div class="flex flex-col md:flex-row items-center gap-[16px]">
+                <div class="flex md:grid md:grid-cols-2 gap-[20px] lg:flex">
+                    <a href=""><img class="max-w-[24px]" src="../assets/images/instagram.svg" alt=""></a>
+                    <a href=""><img class="max-w-[24px]" src="../assets/images/vkontakte.svg" alt=""></a>
+                    <a href=""><img class="max-w-[24px]" src="../assets/images/facebook.svg" alt=""></a>
+                    <a href=""><img class="max-w-[24px]" src="../assets/images/ok.svg" alt=""></a>
+                </div>
+    
+                <div class="flex items-center pl-[24px] gap-[8px] whitespace-nowrap"><img src="../assets/images/phone.svg"
+                        alt=""><a href="">
+                        <p>8 800 777 33 33</p>
+                    </a></div>
+            </div>
+    
+    
+        </div>
+    </footer>
+    
+</body>
+</html>

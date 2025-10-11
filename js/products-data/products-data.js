@@ -1,17 +1,17 @@
 const products = [
   {
     id: 1,
-    name: "",
+    name: "Apple",
     category: "Fruit",
     description: "A round fruit with a red, green, or yellow ",
     price: 89,
     rating: 5,
     discount: 0,
     images: [
+      "../assets/products/1_4.png",
+      "../assets/products/1_2.png",
+      "../assets/products/1_3.png",
       "../assets/products/1.png",
-      "../assets/products/2.png",
-      "../assets/products/3.png",
-      "../assets/products/4.png",
     ],
   },
   {
@@ -24,10 +24,10 @@ const products = [
     rating: 5,
     discount: 20,
     images: [
+      "../assets/products/2_3.png",
+      "../assets/products/2_2.png",
       "../assets/products/2.png",
-      "../assets/products/3.png",
-      "../assets/products/4.png",
-      "../assets/products/5.png",
+      "../assets/products/2_4.png",
     ],
   },
   {
@@ -41,9 +41,9 @@ const products = [
     discount: 20,
     images: [
       "../assets/products/3.png",
-      "../assets/products/4.png",
-      "../assets/products/5.png",
-      "../assets/products/6.png",
+      "../assets/products/3_2.png",
+      "../assets/products/3_3.png",
+      "../assets/products/3_4.png",
     ],
   },
   {
@@ -56,10 +56,10 @@ const products = [
     rating: 4.5,
     discount: 20,
     images: [
+      "../assets/products/4_2.png",
       "../assets/products/4.png",
-      "../assets/products/5.png",
-      "../assets/products/6.png",
-      "../assets/products/7.png",
+      "../assets/products/4_3.png",
+      "../assets/products/4_4.png",
     ],
   },
   {
@@ -72,10 +72,10 @@ const products = [
     rating: 5,
     discount: 20,
     images: [
+      "../assets/products/5_4.png",
+      "../assets/products/5_2.png",
+      "../assets/products/5_3.png",
       "../assets/products/5.png",
-      "../assets/products/6.png",
-      "../assets/products/7.png",
-      "../assets/products/8.png",
     ],
   },
   {
@@ -89,9 +89,9 @@ const products = [
     discount: 50,
     images: [
       "../assets/products/6.png",
-      "../assets/products/7.png",
-      "../assets/products/8.png",
-      "../assets/products/9.png",
+      "../assets/products/6_2.png",
+      "../assets/products/6_3.png",
+      "../assets/products/6_4.png",
     ],
   },
   {
@@ -104,10 +104,10 @@ const products = [
     rating: 3.5,
     discount: 20,
     images: [
-      "../assets/products/7.png",
-      "../assets/products/8.png",
-      "../assets/products/9.png",
-      "../assets/products/10.png",
+      "../assets/products/7_3.png",
+      "../assets/products/7_2.png",
+      "../assets/products/7_3.png",
+      "../assets/products/7_4.png",
     ],
   },
   {
@@ -121,9 +121,9 @@ const products = [
     discount: 20,
     images: [
       "../assets/products/8.png",
-      "../assets/products/9.png",
-      "../assets/products/10.png",
-      "../assets/products/11.png",
+      "../assets/products/8_2.png",
+      "../assets/products/8_3.png",
+      "../assets/products/8_4.png",
     ],
   },
   {
@@ -137,9 +137,9 @@ const products = [
     discount: 20,
     images: [
       "../assets/products/9.png",
-      "../assets/products/10.png",
-      "../assets/products/11.png",
-      "../assets/products/12.png",
+      "../assets/products/9_2.png",
+      "../assets/products/9_3.png",
+      "../assets/products/9_4.png",
     ],
   },
   {
@@ -153,9 +153,9 @@ const products = [
     discount: 0,
     images: [
       "../assets/products/10.png",
-      "../assets/products/11.png",
-      "../assets/products/12.png",
-      "../assets/products/13.png",
+      "../assets/products/10_2.png",
+      "../assets/products/10_3.png",
+      "../assets/products/10_4.png",
     ],
   },
   {
@@ -169,9 +169,9 @@ const products = [
     discount: 50,
     images: [
       "../assets/products/11.png",
-      "../assets/products/12.png",
-      "../assets/products/13.png",
-      "../assets/products/14.png",
+      "../assets/products/11_2.png",
+      "../assets/products/11_3.png",
+      "../assets/products/11_4.png",
     ],
   },
   {
@@ -184,10 +184,10 @@ const products = [
     rating: 4,
     discount: 20,
     images: [
-      "../assets/products/12.png",
-      "../assets/products/13.png",
-      "../assets/products/14.png",
-      "../assets/products/15.png",
+      "../assets/products/12_3.png",
+      "../assets/products/12_2.png",
+      "../assets/products/12_3.png",
+      "../assets/products/12_4.png",
     ],
   },
   {
@@ -200,10 +200,10 @@ const products = [
     rating: 5,
     discount: 0,
     images: [
-      "../assets/products/13.png",
-      "../assets/products/14.png",
-      "../assets/products/15.png",
-      "../assets/products/16.png",
+      "../assets/products/13_2.png",
+      "../assets/products/13_2.png",
+      "../assets/products/13_3.png",
+      "../assets/products/13_4.png",
     ],
   },
   {
@@ -216,10 +216,10 @@ const products = [
     rating: 4.5,
     discount: 50,
     images: [
-      "../assets/products/14.png",
-      "../assets/products/15.png",
-      "../assets/products/16.png",
-      "../assets/products/17.png",
+      "../assets/products/14_3.png",
+      "../assets/products/14_2.png",
+      "../assets/products/14_3.png",
+      "../assets/products/14_4.png",
     ],
   },
   {
@@ -233,9 +233,9 @@ const products = [
     discount: 0,
     images: [
       "../assets/products/15.png",
-      "../assets/products/16.png",
-      "../assets/products/17.png",
-      "../assets/products/18.png",
+      "../assets/products/15_2.png",
+      "../assets/products/15_3.png",
+      "../assets/products/15_4.png",
     ],
   },
   {
@@ -248,10 +248,10 @@ const products = [
     rating: 3.5,
     discount: 0,
     images: [
-      "../assets/products/16.png",
-      "../assets/products/17.png",
-      "../assets/products/18.png",
-      "../assets/products/19.png",
+      "../assets/products/16_2.png",
+      "../assets/products/16_2.png",
+      "../assets/products/16_3.png",
+      "../assets/products/16_4.png",
     ],
   },
   {
@@ -264,10 +264,10 @@ const products = [
     rating: 4.5,
     discount: 50,
     images: [
-      "../assets/products/17.png",
-      "../assets/products/18.png",
-      "../assets/products/19.png",
-      "../assets/products/20.png",
+      "../assets/products/10_2.png",
+      "../assets/products/10_2.png",
+      "../assets/products/10_3.png",
+      "../assets/products/10_4.png",
     ],
   },
   {
@@ -280,10 +280,10 @@ const products = [
     rating: 4,
     discount: 0,
     images: [
-      "../assets/products/18.png",
-      "../assets/products/19.png",
-      "../assets/products/20.png",
-      "../assets/products/21.png",
+      "../assets/products/18_4.png",
+      "../assets/products/18_2.png",
+      "../assets/products/18_3.png",
+      "../assets/products/18_4.png",
     ],
   },
   {
@@ -296,10 +296,10 @@ const products = [
     rating: 4.5,
     discount: 0,
     images: [
-      "../assets/products/19.png",
-      "../assets/products/20.png",
-      "../assets/products/21.png",
-      "../assets/products/22.png",
+      "../assets/products/15.png",
+      "../assets/products/15_2.png",
+      "../assets/products/15_3.png",
+      "../assets/products/15_4.png",
     ],
   },
   {
@@ -313,9 +313,9 @@ const products = [
     discount: 0,
     images: [
       "../assets/products/20.png",
-      "../assets/products/21.png",
-      "../assets/products/22.png",
-      "../assets/products/23.png",
+      "../assets/products/20_2.png",
+      "../assets/products/20_3.png",
+      "../assets/products/20_4.png",
     ],
   },
   {
@@ -329,9 +329,9 @@ const products = [
     discount: 0,
     images: [
       "../assets/products/21.png",
-      "../assets/products/22.png",
-      "../assets/products/23.png",
-      "../assets/products/24.png",
+      "../assets/products/21_2.png",
+      "../assets/products/21_3.png",
+      "../assets/products/21_4.png",
     ],
   },
   {
@@ -345,9 +345,9 @@ const products = [
     discount: 20,
     images: [
       "../assets/products/22.png",
-      "../assets/products/23.png",
-      "../assets/products/24.png",
-      "../assets/products/25.png",
+      "../assets/products/22_2.png",
+      "../assets/products/22_3.png",
+      "../assets/products/22_4.png",
     ],
   },
   {
@@ -361,9 +361,9 @@ const products = [
     discount: 20,
     images: [
       "../assets/products/23.png",
-      "../assets/products/24.png",
-      "../assets/products/25.png",
-      "../assets/products/26.png",
+      "../assets/products/23_2.png",
+      "../assets/products/23_3.png",
+      "../assets/products/23_4.png",
     ],
   },
   {
@@ -377,9 +377,9 @@ const products = [
     discount: 0,
     images: [
       "../assets/products/24.png",
-      "../assets/products/25.png",
-      "../assets/products/26.png",
-      "../assets/products/27.png",
+      "../assets/products/24_2.png",
+      "../assets/products/24_3.png",
+      "../assets/products/24_4.png",
     ],
   },
   {
@@ -393,9 +393,9 @@ const products = [
     discount: 20,
     images: [
       "../assets/products/25.png",
-      "../assets/products/26.png",
-      "../assets/products/27.png",
-      "../assets/products/28.png",
+      "../assets/products/25_2.png",
+      "../assets/products/25_3.png",
+      "../assets/products/25_4.png",
     ],
   },
   {
@@ -409,9 +409,9 @@ const products = [
     discount: 0,
     images: [
       "../assets/products/26.png",
-      "../assets/products/27.png",
-      "../assets/products/28.png",
-      "../assets/products/29.png",
+      "../assets/products/26_2.png",
+      "../assets/products/26_3.png",
+      "../assets/products/26_4.png",
     ],
   },
   {
@@ -425,9 +425,9 @@ const products = [
     discount: 20,
     images: [
       "../assets/products/27.png",
-      "../assets/products/28.png",
-      "../assets/products/29.png",
-      "../assets/products/30.png",
+      "../assets/products/27_2.png",
+      "../assets/products/27_3.png",
+      "../assets/products/27_4.png",
     ],
   },
   {
@@ -441,9 +441,9 @@ const products = [
     discount: 20,
     images: [
       "../assets/products/28.png",
-      "../assets/products/29.png",
-      "../assets/products/30.png",
-      "../assets/products/31.png",
+      "../assets/products/28_2.png",
+      "../assets/products/28_3.png",
+      "../assets/products/28_4.png",
     ],
   },
   {
@@ -457,9 +457,9 @@ const products = [
     discount: 50,
     images: [
       "../assets/products/29.png",
-      "../assets/products/30.png",
-      "../assets/products/31.png",
-      "../assets/products/32.png",
+      "../assets/products/29_2.png",
+      "../assets/products/29_3.png",
+      "../assets/products/29_4.png",
     ],
   },
   {
@@ -473,9 +473,9 @@ const products = [
     discount: 0,
     images: [
       "../assets/products/30.png",
-      "../assets/products/31.png",
-      "../assets/products/32.png",
-      "../assets/products/33.png",
+      "../assets/products/30_2.png",
+      "../assets/products/30_3.png",
+      "../assets/products/30_4.png",
     ],
   },
   {
@@ -489,9 +489,9 @@ const products = [
     discount: 50,
     images: [
       "../assets/products/31.png",
-      "../assets/products/32.png",
-      "../assets/products/33.png",
-      "../assets/products/34.png",
+      "../assets/products/31_2.png",
+      "../assets/products/31_3.png",
+      "../assets/products/31_4.png",
     ],
   },
   {
@@ -505,9 +505,9 @@ const products = [
     discount: 20,
     images: [
       "../assets/products/32.png",
-      "../assets/products/33.png",
-      "../assets/products/34.png",
-      "../assets/products/35.png",
+      "../assets/products/32_2.png",
+      "../assets/products/32_3.png",
+      "../assets/products/32_4.png",
     ],
   },
   {
@@ -521,9 +521,9 @@ const products = [
     discount: 20,
     images: [
       "../assets/products/33.png",
-      "../assets/products/34.png",
-      "../assets/products/35.png",
-      "../assets/products/36.png",
+      "../assets/products/33_2.png",
+      "../assets/products/33_3.png",
+      "../assets/products/33_4.png",
     ],
   },
   {
@@ -537,9 +537,9 @@ const products = [
     discount: 20,
     images: [
       "../assets/products/34.png",
-      "../assets/products/35.png",
-      "../assets/products/36.png",
-      "../assets/products/1.png",
+      "../assets/products/34_2.png",
+      "../assets/products/34_3.png",
+      "../assets/products/34_4.png",
     ],
   },
   {
@@ -553,9 +553,9 @@ const products = [
     discount: 0,
     images: [
       "../assets/products/35.png",
-      "../assets/products/36.png",
-      "../assets/products/1.png",
-      "../assets/products/2.png",
+      "../assets/products/35_2.png",
+      "../assets/products/35_3.png",
+      "../assets/products/35_4.png",
     ],
   },
   {
@@ -569,9 +569,9 @@ const products = [
     discount: 0,
     images: [
       "../assets/products/36.png",
-      "../assets/products/1.png",
-      "../assets/products/2.png",
-      "../assets/products/3.png",
+      "../assets/products/36_2.png",
+      "../assets/products/36_3.png",
+      "../assets/products/36_4.png",
     ],
   },
 ];

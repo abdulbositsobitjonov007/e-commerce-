@@ -3,7 +3,7 @@ const products = [
     id: 1,
     name: "Apple",
     category: "Fruit",
-    description: "A round fruit with a red, green, or yellow ",
+    description: "A round fruit with a red, green, or yellow color and incredibly healthy features.",
     price: 89,
     rating: 5,
     discount: 0,

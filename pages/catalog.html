@@ -8,14 +8,13 @@
 </head>
 <body>
 
-    <header class="py-[11px] px-[20px] bg-[white] border-b-[3px] border-[#E8E2C8] fixed w-full top-[0] z-[2]">
+    <header class="py-[11px] px-[20px] bg-[white] border-b-[3px] border-[#E8E2C8] fixed w-full top-[0] z-[3]">
         <div class="container mx-auto flex justify-between items-center gap-[16px]">
             <a class="flex gap-[11px]" href="../index.html"><img class="max-w-[39px] w-full h-[32px]" src="../assets/images/logo1.svg"
                     alt="logo">
                 <p class="hidden sm:flex">СЕВЕРЯНОЧКА</p>
             </a>
-            <button
-                class="hidden sm:flex gap-[15px] bg-[#70C05B] max-w-[40px] 2xl:max-w-[140px] xl:max-w-[140px] md:max-w-[140px] lg:max-w-[40px] w-full h-[40px] cursor-pointer items-center p-[8px] text-[white] rounded-[8px]"><img
+            <button id="toggle-btn1" class="hidden sm:flex gap-[15px] bg-[#70C05B] max-w-[40px] 2xl:max-w-[140px] xl:max-w-[140px] md:max-w-[140px] lg:max-w-[40px] w-full h-[40px] cursor-pointer items-center p-[8px] text-[white] rounded-[8px]"><img
                     src="../assets/images/menu.svg" alt="">
                 <p class="hidden md:flex lg:hidden xl:flex">Каталог</p>
             </button>
@@ -45,6 +44,26 @@
     
         </div>
     </header>
+
+    <div id="res-menu1"
+        class="hidden duration-600 bg-[white] sm:flex translate-y-[-100%] fixed w-full top-[0] z-[2] pt-[65px] border-b-[3px] border-[#E8E2C8]">
+        <ul
+            class=" px-[20px] sm:grid py-[20px] md:py-[30px] container mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px] md:gap-[20px] lg:gap-[30px]">
+            <li><a class="font-bold" href="">Молоко, сыр, яйцо</a></li>
+            <li><a class="font-bold" href="">Хлеб</a></li>
+            <li><a class="font-bold" href="">Фрукты и овощи</a></li>
+            <li><a class="font-bold" href="">Замороженные продукты</a></li>
+            <li><a class="font-bold" href="">Напитки</a></li>
+            <li><a class="font-bold" href="">Кондитерские изделия</a></li>
+            <li><a class="font-bold" href="">Чай, кофе</a></li>
+            <li><a class="font-bold" href="">Бакалея</a></li>
+            <li><a class="font-bold" href="">Здоровое питание</a></li>
+            <li><a class="font-bold" href="">Зоотовары</a></li>
+            <li><a class="font-bold" href="">Непродовольственные товары</a></li>
+            <li><a class="font-bold" href="">Детское питание</a></li>
+            <li><a class="font-bold" href="">Мясо, птица, колбаса</a></li>
+        </ul>
+        </div>
 
     <main>
         <section class="bg-[#FBF8EC] px-[20px] pt-[94px] pb-[120px]">
@@ -208,6 +227,7 @@
     
         </div>
     </footer>
-    
+     
+    <script src="../js/main.js"></script>
 </body>
 </html>

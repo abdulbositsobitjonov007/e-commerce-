@@ -1,60 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categories</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body>
-    
-    <header class="py-[11px] px-[20px] bg-[white] border-b-[3px] border-[#E8E2C8] fixed w-full top-[0] z-[2]">
-        <div class="container mx-auto flex justify-between items-center gap-[16px]">
-            <a class="flex gap-[11px]" href="../index.html"><img class="max-w-[39px] w-full h-[32px]" src="../assets/images/logo1.svg"
-                    alt="logo">
-                <p class="hidden sm:flex">СЕВЕРЯНОЧКА</p>
-            </a>
-            <button
-                class="hidden sm:flex gap-[15px] bg-[#70C05B] max-w-[40px] 2xl:max-w-[140px] xl:max-w-[140px] md:max-w-[140px] lg:max-w-[40px] w-full h-[40px] cursor-pointer items-center p-[8px] text-[white] rounded-[8px]"><a class="flex gap-[15px]" href="../pages/catalog.html"><img
-                    src="../assets/images/menu.svg" alt="">
-                <p class="hidden md:flex lg:hidden xl:flex">Каталог</p></a>
-            </button>
-            <form>
-                <div class="flex">
-                    <input
-                        class="w-[220px] sm:w-[280px] xl:w-[336px] h-[40px] rounded-l-[8px] border-[2px] border-solid border-[#70C05B] px-[16px] outline-neutral-500 border-r-0 border-r-transparent "
-                        type="search" name="" placeholder="Найти товар" id="">
-                    <button
-                        class="w-[40px] h-[40px] rounded-r-[8px] border-[2px] border-green-500 outline-neutral-500 border-l-0 pl-[7px] cursor-pointer"><img
-                            src="../assets/images/search.svg" alt=""></button>
-                </div>
-            </form>
-            <ul class="flex gap-[24px] hidden lg:flex">
-                <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center" href="../pages/favourites.html"><img
-                            src="../assets/images/favourites.svg" alt="">Избранное</a></li>
-                <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center" href="../pages/all_products.html"><img
-                            src="../assets/images/products.svg" alt="">Продукты</a></li>
-                <li class="place-items-center"><a class="flex flex-col items-center" href="../pages/basket.html"><img
-                            src="../assets/images/shop.svg" alt="">Корзина</a></li>
-            </ul>
-            <div class="hidden sm:flex items-center gap-[10px]">
-                <img class="w-[40px] h-[40px]" src="../assets/images/avatar.png" alt="">
-                <h1 class="pr-[15px] hidden lg:flex">Алексей</h1>
-                <img src="../assets/images/arrow down.svg" alt="">
-            </div>
-    
-        </div>
-    </header>
+let path = new URLSearchParams(window.location.search);
 
-    <main>
-        <section class="bg-[#FBF8EC] px-[20px] pt-[94px] pb-[120px]">
-            <div class="container product-type mx-auto">
+let category = path.get("category");
+
+let productCategory = document.querySelector(".product-type");
+
+let typeProduct = products.filter((el) => el.category == category);
+
+typeProduct.map((el) => {
+    productCategory.innerHTML +=      
+    `
+          <div class="container product-type mx-auto">
                 <div class="flex items-center gap-[16px]"><a class="text-[12px] font-[400]" href="../index.html">Главная</a><img
                         src="../assets/images/chevron-right.svg" alt=""><a class="text-[12px] font-[400]" href="../pages/catalog.html">Каталог</a>
-                        <img src="../assets/images/chevron-right.svg" alt=""><p class="text-[12px] font-[400]">Молоко, сыр, яйцо</p>
+                        <img src="../assets/images/chevron-right.svg" alt=""><p class="text-[12px] font-[400]">${el.category}</p>
                     </div>
                 <h1 class="text-[26px] md:text-[34px] lg:text-[48px]  font-[700] pt-[30px] pb-[40px]">Молоко, сыр, яйцо</h1>
-                
+
                 <div class="lg:flex justify-between gap-[20px]">
                     <div class="max-w-[272px]">
                          <h1 class="text-center lg:text-left max-w-[128px] lg:max-w-[272px] h-[44px] p-[10px] mb-[32px] lg:mb-[0] bg-[#F3F2F1] cursor-pointer hover:bg-[#70C05B] hover:text-[white] duration-300">Фильтр</h1>
@@ -73,30 +34,30 @@
                             </div>
                             <div class="pt-[20px] flex justify-center">
                             <input type="range" min="0" max="100" value="40"
-                                class="w-[172px] h-[5px] bg-[#70C05B] rounded-lg appearance-none cursor-pointer accent-[#70C05B]">    
+                                class="w-[172px] h-[5px] bg-[#70C05B] rounded-lg appearance-none cursor-pointer accent-[#70C05B]">
                             </div>
-                            
+
 
                          </div>
                     </div>
 <div>
                     <div class="grid grid-cols-2 sm:grid-cols-3 gap-[40px]">
-                    
+
                             <div
                                 class="w-[160px] sm:w-[204px] md:w-[224px] xl:w-[272px] max-h-[343px] sm:max-h-[349px] bg-[white] rounded-[4px] shadow-md hover:shadow-orange-300 hover:shadow-xl duration-300">
                                 <div class="relative w-full">
                                     <img class="block w-full h-full object-contain" style="max-width:100%; height:auto;"
                                         src="../assets/images/cream-cheese.png" alt="">
-                    
+
                                     <img style="width: 29px; height: 28px;"
                                         class="absolute top-[12px] right-[12px] p-[4px] rounded-[4px] bg-[#F3F2F1] opacity-[50%] cursor-pointer"
                                         src="../assets/images/heart.svg" alt="">
                                 </div>
-                    
+
                                 <div class="p-[8px] w-full">
                                     <div class="flex justify-between">
                                         <h1 class="text-[18px] font-[700]">139,99 ₽</h1>
-                    
+
                                     </div>
                                     <div class="flex justify-between invisible">
                                         <p class="text-[#BFBFBF] text-[12px] font-[400]">С картой</p>
@@ -116,7 +77,7 @@
                                         корзину</button>
                                 </div>
                             </div>
-                    
+
                             <div
                                 class=" w-[160px] sm:w-[204px] md:w-[224px] xl:w-[272px] max-h-[343px] sm:max-h-[349px] bg-[white] rounded-[4px] shadow-md hover:shadow-orange-300 hover:shadow-xl duration-300">
                                 <div class="relative w-full">
@@ -127,7 +88,7 @@
                                         class="absolute top-[12px] right-[12px] p-[4px] rounded-[4px] bg-[#F3F2F1] opacity-[50%] cursor-pointer"
                                         src="../assets/images/heart.svg" alt="">
                                 </div>
-                    
+
                                 <div class="p-[8px] w-full">
                                     <div class="flex justify-between">
                                         <h1 class="text-[18px] font-[700]">69,99 ₽</h1>
@@ -149,7 +110,7 @@
                                         корзину</button>
                                 </div>
                             </div>
-                    
+
                             <div
                                 class="w-[160px] sm:w-[204px] md:w-[224px] xl:w-[272px]  max-h-[343px] sm:max-h-[349px] bg-[white] rounded-[4px] shadow-md hover:shadow-orange-300 hover:shadow-xl duration-300">
                                 <div class="relative w-full">
@@ -160,7 +121,7 @@
                                         class="absolute top-[12px] right-[12px] p-[4px] rounded-[4px] bg-[#F3F2F1] opacity-[50%] cursor-pointer"
                                         src="../assets/images/heart.svg" alt="">
                                 </div>
-                    
+
                                 <div class="p-[8px]">
                                     <div class="flex justify-between">
                                         <h1 class="text-[18px] font-[700]">77,99 ₽</h1>
@@ -182,22 +143,22 @@
                                         корзину</button>
                                 </div>
                             </div>
-                    
+
                             <div
                                 class=" w-[160px] sm:w-[204px] md:w-[224px] xl:w-[272px]  max-h-[343px] sm:max-h-[349px] bg-[white] rounded-[4px] shadow-md hover:shadow-orange-300 hover:shadow-xl duration-300">
                                 <div class="relative w-full">
                                     <img class="block w-full h-full object-contain" style="max-width:100%; height:auto;"
                                         src="../assets/images/butter.png" alt="">
-                    
+
                                     <img style="width: 29px; height: 28px;"
                                         class="absolute top-[12px] right-[12px] p-[4px] rounded-[4px] bg-[#F3F2F1] opacity-[50%] cursor-pointer"
                                         src="../assets/images/heart.svg" alt="">
                                 </div>
-                    
+
                                 <div class="p-[8px]">
                                     <div class="flex justify-between">
                                         <h1 class="text-[18px] font-[700]">192,99 ₽</h1>
-                    
+
                                     </div>
                                     <div class="flex justify-between invisible">
                                         <p class="text-[#BFBFBF] text-[12px] font-[400]">С картой</p>
@@ -215,22 +176,22 @@
                                         корзину</button>
                                 </div>
                             </div>
-                    
+
                             <div
                                 class="w-[160px] sm:w-[204px] md:w-[224px] xl:w-[272px]  max-h-[343px] sm:max-h-[349px] bg-[white] rounded-[4px] shadow-md hover:shadow-orange-300 hover:shadow-xl duration-300">
                                 <div class="relative w-full">
                                     <img class="block w-full h-full object-contain" style="max-width:100%; height:auto;"
                                         src="../assets/images/yoghurt.png" alt="">
-                    
+
                                     <img style="width: 29px; height: 28px;"
                                         class="absolute top-[12px] right-[12px] p-[4px] rounded-[4px] bg-[#F3F2F1] opacity-[50%] cursor-pointer"
                                         src="../assets/images/heart.svg" alt="">
                                 </div>
-                    
+
                                 <div class="p-[8px]">
                                     <div class="flex justify-between">
                                         <h1 class="text-[18px] font-[700]">29,99 ₽</h1>
-                    
+
                                     </div>
                                     <div class="flex justify-between invisible">
                                         <p class="text-[#BFBFBF] text-[12px] font-[400]">С картой</p>
@@ -250,22 +211,22 @@
                                         корзину</button>
                                 </div>
                             </div>
-                    
+
                             <div
                                 class=" w-[160px] sm:w-[204px] md:w-[224px] xl:w-[272px]  max-h-[343px] sm:max-h-[349px] bg-[white] rounded-[4px] shadow-md hover:shadow-orange-300 hover:shadow-xl duration-300">
                                 <div class="relative w-full">
                                     <img class="block w-full h-full object-contain" style="max-width:100%; height:auto;"
                                         src="../assets/images/yoghurt.png" alt="">
-                    
+
                                     <img style="width: 29px; height: 28px;"
                                         class="absolute top-[12px] right-[12px] p-[4px] rounded-[4px] bg-[#F3F2F1] opacity-[50%] cursor-pointer"
                                         src="../assets/images/heart.svg" alt="">
                                 </div>
-                    
+
                                 <div class="p-[8px]">
                                     <div class="flex justify-between">
                                         <h1 class="text-[18px] font-[700]">29,99 ₽</h1>
-                    
+
                                     </div>
                                     <div class="flex justify-between invisible">
                                         <p class="text-[#BFBFBF] text-[12px] font-[400]">С картой</p>
@@ -285,51 +246,38 @@
                                         корзину</button>
                                 </div>
                             </div>
-                    
 
-                    
-                        </div> 
+
+
+                        </div>
                     <div class="flex justify-center mt-[40px] text-[#606060] cursor-pointer"><p class="py-[8px] px-[24px] bg-[#F3F2F1]">Показать ещё</p></div></div>
                 </div>
-                
-            </div>
-        </section>
-    </main>
 
-    <footer class=" pt-[24px] pb-[58px] bg-[#FBe8c9] px-[20px]">
-        <div class="container mx-auto flex justify-between ">
-    
-            <div class="flex flex-col md:flex-row items-center gap-[20px] block">
-                <div class="flex justify-self-start"><a href=""><img src="../assets/images/logo.svg" alt=""></a></div>
-    
-                <div class="flex gap-[20px] flex-wrap">
-                    <a class="text-[12px] flex white-space" href="../pages/about_us.html">О компании</a>
-                    <a class="text-[12px]" href="../pages/contacts.html">Контакты</a>
-                    <a class="text-[12px]" href="../pages/vacancies.html">Вакансии</a>
-                    <a class="text-[12px]" href="">Статьи</a>
-                    <a class="text-[12px]" href="">Политика обработки персональных данных</a>
-                </div>
-    
             </div>
-    
-            <div class="flex flex-col md:flex-row items-center gap-[16px]">
-                <div class="flex md:grid md:grid-cols-2 gap-[20px] lg:flex">
-                    <a href=""><img class="max-w-[24px]" src="../assets/images/instagram.svg" alt=""></a>
-                    <a href=""><img class="max-w-[24px]" src="../assets/images/vkontakte.svg" alt=""></a>
-                    <a href=""><img class="max-w-[24px]" src="../assets/images/facebook.svg" alt=""></a>
-                    <a href=""><img class="max-w-[24px]" src="../assets/images/ok.svg" alt=""></a>
-                </div>
-    
-                <div class="flex items-center pl-[24px] gap-[8px] whitespace-nowrap"><img src="../assets/images/phone.svg"
-                        alt=""><a href="">
-                        <p>8 800 777 33 33</p>
-                    </a></div>
-            </div>
-    
-    
-        </div>
-    </footer>
+          `
+});
 
-    <script src="../js/category.js"></script>
-</body>
-</html>
+let allCategories = document.querySelector(".all-categories");
+
+products.map((el) => {
+    allCategories.innerHTML += 
+    `
+    <div id="res-menu" class="all-categories hidden duration-600 bg-[white] sm:flex translate-y-[-100%] fixed w-full top-[0] z-[2] pt-[65px] border-b-[3px] border-[#E8E2C8]">
+      <ul class=" px-[20px] sm:grid py-[20px] md:py-[30px] container mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px] md:gap-[20px] lg:gap-[30px]">
+        <li><a class="font-bold" href="../pages/categories.html?id=${el.category}">Молоко, сыр, яйцо</a></li>
+        <li><a class="font-bold" href="">Хлеб</a></li>
+        <li><a class="font-bold" href="">Фрукты и овощи</a></li>
+        <li><a class="font-bold" href="">Замороженные продукты</a></li>
+        <li><a class="font-bold" href="">Напитки</a></li>
+        <li><a class="font-bold" href="">Кондитерские изделия</a></li>
+        <li><a class="font-bold" href="">Чай, кофе</a></li>
+        <li><a class="font-bold" href="">Бакалея</a></li>
+        <li><a class="font-bold" href="">Здоровое питание</a></li>
+        <li><a class="font-bold" href="">Зоотовары</a></li>
+        <li><a class="font-bold" href="">Непродовольственные товары</a></li>
+        <li><a class="font-bold" href="">Детское питание</a></li>
+        <li><a class="font-bold" href="">Мясо, птица, колбаса</a></li>
+    </ul>
+    </div>
+    `
+});

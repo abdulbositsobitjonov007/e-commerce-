@@ -9,7 +9,6 @@ let discountcards = document.querySelector(".product-dis-cards");
 let discountFiltrProducts = products.filter((el) => el.discount > 0);
 let discountFourSliceproducts = discountFiltrProducts.slice(discountFiltrProducts.length - 4, discountFiltrProducts.length);
 
-
 let idProduct = products.filter((el) => el.id == id);
 
 idProduct.map((el) => {
@@ -204,7 +203,9 @@ idProduct.map((el) => {
                </div>
             </div>
     `
-})
+});
+
+
 
 discountFourSliceproducts.map((el) => {
     discountcards.innerHTML +=

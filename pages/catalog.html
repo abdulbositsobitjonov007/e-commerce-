@@ -14,25 +14,29 @@
                     alt="logo">
                 <p class="hidden sm:flex">СЕВЕРЯНОЧКА</p>
             </a>
-            <button id="toggle-btn1" class="hidden sm:flex gap-[15px] bg-[#70C05B] max-w-[40px] 2xl:max-w-[140px] xl:max-w-[140px] md:max-w-[140px] lg:max-w-[40px] w-full h-[40px] cursor-pointer items-center p-[8px] text-[white] rounded-[8px]"><img
-                    src="../assets/images/menu.svg" alt="">
-                <p class="hidden md:flex lg:hidden xl:flex">Каталог</p>
-            </button>
+            <button id="toggle-btn"
+                class="hidden sm:flex gap-[15px] bg-[#70C05B] max-w-[40px] 2xl:max-w-[140px] xl:max-w-[140px] md:max-w-[140px] lg:max-w-[40px] w-full h-[40px] cursor-pointer items-center p-[8px] text-[white] rounded-[8px]"><a
+                    class="flex gap-[15px]"><img src="../assets/images/menu.svg" alt="">
+                    <p class="hidden md:flex lg:hidden xl:flex">Каталог</p>
+                </a></button>
             <form>
-                <div class="flex">
-                    <input
-                        class="w-[220px] sm:w-[280px] xl:w-[336px] h-[40px] rounded-l-[8px] border-[2px] border-solid border-[#70C05B] px-[16px] outline-neutral-500 border-r-0 border-r-transparent "
+                <div class="flex relative">
+                    <input id="search"
+                        class="max-w-[520px] sm:max-w-[280px] xl:w-[336px] h-[40px] rounded-l-[8px] border-[2px] border-solid border-[#70C05B] px-[16px] outline-neutral-500 border-r-0 border-r-transparent "
                         type="search" name="" placeholder="Найти товар" id="">
                     <button
                         class="w-[40px] h-[40px] rounded-r-[8px] border-[2px] border-green-500 outline-neutral-500 border-l-0 pl-[7px] cursor-pointer"><img
                             src="../assets/images/search.svg" alt=""></button>
-                </div>
+                    <div
+                        class="search-cards overflow-y-scroll overflow-hidden max-h-[500px] w-full absolute py-[10px] top-[50px] rounded-[8px] border-[2px] border-solid border-[#70C05B] px-[16px] outline-neutral-500 bg-[white]">
+                    </div>
+                    </div>
             </form>
             <ul class="flex gap-[24px] hidden lg:flex">
-                <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center" href="../pages/favourites.html"><img
-                            src="../assets/images/favourites.svg" alt="">Избранное</a></li>
-                <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center" href="../pages/all_products.html"><img
-                            src="../assets/images/products.svg" alt="">Продукты</a></li>
+                <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center"
+                        href="../pages/favourites.html"><img src="../assets/images/favourites.svg" alt="">Избранное</a></li>
+                <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center"
+                        href="../pages/all_products.html"><img src="../assets/images/products.svg" alt="">Продукты</a></li>
                 <li class="place-items-center"><a class="flex flex-col items-center" href="../pages/basket.html"><img
                             src="../assets/images/shop.svg" alt="">Корзина</a></li>
             </ul>
@@ -45,7 +49,7 @@
         </div>
     </header>
 
-    <div id="res-menu1"
+    <div id="res-menu"
         class="hidden duration-600 bg-[white] sm:flex translate-y-[-100%] fixed w-full top-[0] z-[2] pt-[65px] border-b-[3px] border-[#E8E2C8]">
         <ul
             class=" px-[20px] sm:grid py-[20px] md:py-[30px] container mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px] md:gap-[20px] lg:gap-[30px]">
@@ -228,6 +232,8 @@
         </div>
     </footer>
      
-    <script src="../js/main.js"></script>
+    <script src="../js/products-data/products-data.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/catalog_toggle.js"></script>
 </body>
 </html>

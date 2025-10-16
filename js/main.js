@@ -1,3 +1,5 @@
+ 
+
 $(document).ready(function () {
     $(".owl-carousel").owlCarousel();
 });
@@ -55,14 +57,15 @@ $(".owl-carousel").owlCarousel({
 let toggleBtn = document.getElementById("toggle-btn");
 let resMenu = document.getElementById("res-menu");
 
-let toggleBtn1 = document.getElementById("toggle-btn1");
-let resMenu1 = document.getElementById("res-menu1");
-
-
 toggleBtn.addEventListener("click", function(){
     resMenu.classList.toggle("translate-y-[-100%]");
-})
+});
 
-toggleBtn1.addEventListener("click", function () {
-    resMenu1.classList.toggle("translate-y-[-100%]");
-})
+
+ let loadingScreen = document.getElementById("loading");
+
+ window.addEventListener("load", function(){
+    loadingScreen.classList.add("hidden")
+ })
+ 
+

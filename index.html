@@ -11,22 +11,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="./css/style.css">
+        
 
 
 </head>
-<body>
+<body>  
     
+    <div id="loading" class="fixed w-full h-full z-[4] duration-600">
+        <img class="w-full h-full" src="./assets/images/Dual Ball@1x-1.0s-203px-203px.svg" alt="loading">
+    </div>
+
+
     <header class="py-[11px] px-[20px] bg-[white] border-b-[3px] border-[#E8E2C8] fixed w-full top-[0] z-[3]">
         <div class="container mx-auto flex justify-between items-center gap-[16px]">
             <a class="flex gap-[11px]" href=""><img class="max-w-[39px] w-full h-[32px]" src="./assets/images/logo1.svg" alt="logo"><p class="hidden sm:flex">СЕВЕРЯНОЧКА</p></a>
             <button id="toggle-btn" class="hidden sm:flex gap-[15px] bg-[#70C05B] max-w-[40px] 2xl:max-w-[140px] xl:max-w-[140px] md:max-w-[140px] lg:max-w-[40px] w-full h-[40px] cursor-pointer items-center p-[8px] text-[white] rounded-[8px]"><a class="flex gap-[15px]"><img src="./assets/images/menu.svg" alt=""> <p class="hidden md:flex lg:hidden xl:flex">Каталог</p></a></button>
-            <form>
-                <div class="flex">
-                <input  class="max-w-[520px] sm:max-w-[280px] xl:w-[336px] h-[40px] rounded-l-[8px] border-[2px] border-solid border-[#70C05B] px-[16px] outline-neutral-500 border-r-0 border-r-transparent " type="search" name="" placeholder="Найти товар" id="">
+            <form class="flex flex-col gap-[5px]">
+                <div class="flex relative">
+                <input id="search" class="max-w-[520px] sm:max-w-[280px] xl:w-[336px] h-[40px] rounded-l-[8px] border-[2px] border-solid border-[#70C05B] px-[16px] outline-neutral-500 border-r-0 border-r-transparent " type="search" name="" placeholder="Найти товар" id="">
                 <button class="w-[40px] h-[40px] rounded-r-[8px] border-[2px] border-green-500 outline-neutral-500 border-l-0 pl-[7px] cursor-pointer"><img src="./assets/images/search.svg" alt=""></button>    
-                </div>
+                <div class="search-cards overflow-y-scroll overflow-hidden max-h-[500px] w-full absolute py-[10px] top-[50px] rounded-[8px] border-[2px] border-solid border-[#70C05B] px-[16px] outline-neutral-500 bg-[white]">
+            </div>
+        </div>
+                
             </form>
+            
+
                 <ul class="flex gap-[24px] hidden lg:flex">
                     <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center" href="./pages/favourites.html"><img src="./assets/images/favourites.svg" alt="">Избранное</a></li>
                     <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center" href="./pages/all_products.html"><img src="./assets/images/products.svg" alt="">Продукты</a></li>
@@ -41,7 +51,7 @@
         </div>
     </header>
 
-    <div id="res-menu" class="hidden duration-600 bg-[white] sm:flex translate-y-[-100%] fixed w-full top-[0] z-[2] pt-[65px] border-b-[3px] border-[#E8E2C8]">
+    <div id="res-menu" class="all-categories hidden duration-600 bg-[white] sm:flex translate-y-[-100%] fixed w-full top-[0] z-[2] pt-[65px] border-b-[3px] border-[#E8E2C8]">
       <ul class=" px-[20px] sm:grid py-[20px] md:py-[30px] container mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px] md:gap-[20px] lg:gap-[30px]">
         <li><a class="font-bold" href="">Молоко, сыр, яйцо</a></li>
         <li><a class="font-bold" href="">Хлеб</a></li>
@@ -58,7 +68,6 @@
         <li><a class="font-bold" href="">Мясо, птица, колбаса</a></li>
     </ul>  
     </div>
-    
 
     <main>
 
@@ -841,6 +850,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="./js/products-data/products-data.js"></script>
         <script src="./js/products.js"></script>
+        <script src="./js/search.js"></script>
         <script src="./js/main.js"></script>
 </body>
 </html>

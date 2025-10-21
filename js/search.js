@@ -13,8 +13,9 @@ searchExist ? searchCards.classList.remove("hidden") : searchCards.classList.add
 
     let searchProducts = products.filter((el) => el.name.toLowerCase().includes(searchValue.toLowerCase()))
 
-    searchProducts.map((el) => {
-        searchCards.innerHTML +=
+    
+        searchProducts.length === 0 ? searchCards.innerHTML = "Not found" : searchProducts.map((el) => {
+        searchCards.innerHTML += 
             `
    <a href="./pages/product.html?id=${el.id}"><div class="search-card flex w-full items-center py-[3px] gap-[10px]">
                    <img class = "object-cover overflow-hidden rounded-[4px] max-w-[70px] w-full h-[50px]" src="${el.images[1]}" alt="">

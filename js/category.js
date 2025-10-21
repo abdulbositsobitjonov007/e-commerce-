@@ -264,7 +264,7 @@ products.map((el) => {
     `
     <div id="res-menu" class="all-categories hidden duration-600 bg-[white] sm:flex translate-y-[-100%] fixed w-full top-[0] z-[2] pt-[65px] border-b-[3px] border-[#E8E2C8]">
       <ul class=" px-[20px] sm:grid py-[20px] md:py-[30px] container mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px] md:gap-[20px] lg:gap-[30px]">
-        <li><a class="font-bold" href="../pages/categories.html?id=${el.category}">Молоко, сыр, яйцо</a></li>
+        <li><a class="font-bold" href="./pages/all_products.html?id=${el.category}">Молоко, сыр, яйцо</a></li>
         <li><a class="font-bold" href="">Хлеб</a></li>
         <li><a class="font-bold" href="">Фрукты и овощи</a></li>
         <li><a class="font-bold" href="">Замороженные продукты</a></li>

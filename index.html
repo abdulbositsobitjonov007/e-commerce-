@@ -38,9 +38,9 @@
             
 
                 <ul class="flex gap-[24px] hidden lg:flex">
-                    <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center" href="./pages/favourites.html"><img src="./assets/images/favourites.svg" alt="">Избранное</a></li>
-                    <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center" href="./pages/all_products.html"><img src="./assets/images/products.svg" alt="">Продукты</a></li>
-                    <li class="place-items-center"><a class="flex flex-col items-center" href="./pages/basket.html"><img src="./assets/images/shop.svg" alt="">Корзина</a></li>
+                    <li class="items-center pt-[5px]"><a class="flex flex-col items-center" href="./pages/favourites.html"><img src="./assets/images/favourites.svg" alt="">Избранное</a></li>
+                    <li class="items-center pt-[5px]"><a class="flex flex-col items-center" href="./pages/all_products.html"><img src="./assets/images/products.svg" alt="">Продукты</a></li>
+                    <li class="items-center pt-[5px]"><a class="flex flex-col items-center relative" href="./pages/basket.html"><img class="w-[24px]" src="./assets/images/Cart2.svg"  alt="">Корзина <span class="absolute top-[-10px] right-[7px] bg-[red] rounded-full px-[5px] text-[white] text-[12px]">1</span></a></li>
                 </ul>
                 <div class="hidden sm:flex items-center gap-[10px]">
                     <img class="w-[40px] h-[40px]" src="./assets/images/avatar.png" alt="">
@@ -91,7 +91,7 @@
                 <span class="flex place-items-center align-middle pb-[25px] gap-[10px]"><a class="text-[#606060]" href="./pages/all_products.html">Все продукты </a><img src="./assets/images/arrow-right.svg" alt=""></span>
                 </div>
 
-                <div class="dis-cards owl-carousel owl-theme"> 
+                <div id="carts" class="dis-cards owl-carousel owl-theme"> 
 
                 </div>
 
@@ -111,280 +111,7 @@
                 </div>
         
                 <div class="cards owl-carousel owl-theme">
-                    
-                    <!-- <div class=" flex flex-col gap-[30px]">
-                        <div
-                        class="w-[160px] sm:w-[204px] md:w-[224px] xl:w-[272px] max-h-[343px] sm:max-h-[349px] bg-[white] rounded-[4px] shadow-md hover:shadow-orange-300 hover:shadow-xl duration-300">
-                        <div class="relative w-full">
-                            <img class="block w-full h-full object-contain" style="max-width:100%; height:auto;"
-                                src="./assets/images/kolbasa.png" alt="">
 
-                            <img style="width: 29px; height: 28px;"
-                                class="absolute top-[12px] right-[12px] p-[4px] rounded-[4px] bg-[#F3F2F1] opacity-[50%] cursor-pointer"
-                                src="./assets/images/heart.svg" alt="">
-                        </div>
-        
-                        <div class="p-[8px] w-full">
-                            <div class="flex justify-between">
-                                <h1 class="text-[18px] font-[700]">599,99 ₽</h1>
-
-                            </div>
-                            <div class="flex justify-between invisible">
-                                <p class="text-[#BFBFBF] text-[12px] font-[400]">С картой</p>
-                                <p class="text-[#BFBFBF] text-[12px] font-[400]">Обычная</p>
-                            </div>
-                            <p class="text-[17px] font-[400] font-rubik pt-[5px] pb-[5px] line-clamp-2">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</p>
-                            <span class="flex pb-[10px] space-x-1"><img style="width: 16px; height: 16px;"
-                                    src="./assets/images/star.svg" alt=""><img style="width: 16px; height: 16px;"
-                                    src="./assets/images/star.svg" alt=""><img style="width: 16px; height: 16px;"
-                                    src="./assets/images/empty-star.svg" alt=""><img style="width: 16px; height: 16px;"
-                                    src="./assets/images/empty-star.svg" alt=""><img style="width: 16px; height: 16px;"
-                                    src="./assets/images/empty-star.svg" alt=""></span>
-                            <button
-                                class="cursor-pointer w-[258px] w-full h-[40px] rounded-[4px] border-[1px] border-[#70C05B] text-[#70C05B] text-[16px] font-[400] font-rubik hover:bg-[#FF6633] hover:border-[#FF6633] hover:text-[white] duration-300">В
-                                корзину</button>
-                        </div>
-                    </div>
-
-                    <div
-                        class="sm:hidden w-[160px] sm:w-[204px] md:w-[224px] xl:w-[272px] max-h-[343px] sm:max-h-[349px] bg-[white] rounded-[4px] shadow-md hover:shadow-orange-300 hover:shadow-xl duration-300">
-                        <div class="relative w-full">
-                            <img class="block w-full h-full object-contain" style="max-width:100%; height:auto;"
-                                src="./assets/images/kolbasa.png" alt="">
-                    
-                            <img style="width: 29px; height: 28px;"
-                                class="absolute top-[12px] right-[12px] p-[4px] rounded-[4px] bg-[#F3F2F1] opacity-[50%] cursor-pointer"
-                                src="./assets/images/heart.svg" alt="">
-                        </div>
-                    
-                        <div class="p-[8px] w-full">
-                            <div class="flex justify-between">
-                                <h1 class="text-[18px] font-[700]">599,99 ₽</h1>
-                    
-                            </div>
-                            <div class="flex justify-between invisible">
-                                <p class="text-[#BFBFBF] text-[12px] font-[400]">С картой</p>
-                                <p class="text-[#BFBFBF] text-[12px] font-[400]">Обычная</p>
-                            </div>
-                            <p class="text-[17px] font-[400] font-rubik pt-[5px] pb-[5px] line-clamp-2">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ
-                                GS12»</p>
-                            <span class="flex pb-[10px] space-x-1"><img style="width: 16px; height: 16px;" src="./assets/images/star.svg"
-                                    alt=""><img style="width: 16px; height: 16px;" src="./assets/images/star.svg" alt=""><img
-                                    style="width: 16px; height: 16px;" src="./assets/images/empty-star.svg" alt=""><img
-                                    style="width: 16px; height: 16px;" src="./assets/images/empty-star.svg" alt=""><img
-                                    style="width: 16px; height: 16px;" src="./assets/images/empty-star.svg" alt=""></span>
-                            <button
-                                class="cursor-pointer w-[258px] w-full h-[40px] rounded-[4px] border-[1px] border-[#70C05B] text-[#70C05B] text-[16px] font-[400] font-rubik hover:bg-[#FF6633] hover:border-[#FF6633] hover:text-[white] duration-300">В
-                                корзину</button>
-                        </div>
-                    </div>
-                    </div>
-
-                    <div class="flex flex-col gap-[30px]">
-                        <div
-                        class="w-[160px] sm:w-[204px] md:w-[224px] xl:w-[272px]  max-h-[343px] sm:max-h-[349px] bg-[white] rounded-[4px] shadow-md hover:shadow-orange-300 hover:shadow-xl duration-300">
-                        <div class="relative w-full">
-                            <img class="block w-full h-full object-contain" style="max-width:100%; height:auto;"
-                                src="./assets/images/salami.png" alt="">
-
-                            <img style="width: 29px; height: 28px;"
-                                class="absolute top-[12px] right-[12px] p-[4px] rounded-[4px] bg-[#F3F2F1] opacity-[50%] cursor-pointer"
-                                src="./assets/images/heart.svg" alt="">
-                        </div>
-        
-                        <div class="p-[8px]">
-                            <div class="flex justify-between">
-                                <h1 class="text-[18px] font-[700]">44,50 ₽</h1>
-
-                            </div>
-                            <div class="flex justify-between invisible">
-                                <p class="text-[#BFBFBF] text-[12px] font-[400]">С картой</p>
-                                <p class="text-[#BFBFBF] text-[12px] font-[400]">Обычная</p>
-                            </div>
-                            <p class="text-[17px] font-[400] font-rubik pt-[5px] pb-[5px] line-clamp-2">Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ Сальчичон и Тоскан</p>
-                            <span class="flex pb-[10px] space-x-1"><img style="width: 16px; height: 16px;"
-                                    src="./assets/images/star.svg" alt=""><img style="width: 16px; height: 16px;"
-                                    src="./assets/images/star.svg" alt=""><img style="width: 16px; height: 16px;"
-                                    src="./assets/images/star.svg" alt=""><img style="width: 16px; height: 16px;"
-                                    src="./assets/images/star.svg" alt=""><img style="width: 16px; height: 16px;"
-                                    src="./assets/images/star.svg" alt=""></span>
-                            <button
-                                class="cursor-pointer w-[258px] w-full h-[40px] rounded-[4px] border-[1px] border-[#70C05B] text-[#70C05B] text-[16px] font-[400] font-rubik hover:bg-[#FF6633] hover:border-[#FF6633] hover:text-[white] duration-300">В
-                                корзину</button>
-                        </div>
-                    </div>
-
-                    <div
-                        class="sm:hidden w-[160px] sm:w-[204px] md:w-[224px] xl:w-[272px]  max-h-[343px] sm:max-h-[349px] bg-[white] rounded-[4px] shadow-md hover:shadow-orange-300 hover:shadow-xl duration-300">
-                        <div class="relative w-full">
-                            <img class="block w-full h-full object-contain" style="max-width:100%; height:auto;"
-                                src="./assets/images/salami.png" alt="">
-                    
-                            <img style="width: 29px; height: 28px;"
-                                class="absolute top-[12px] right-[12px] p-[4px] rounded-[4px] bg-[#F3F2F1] opacity-[50%] cursor-pointer"
-                                src="./assets/images/heart.svg" alt="">
-                        </div>
-                    
-                        <div class="p-[8px]">
-                            <div class="flex justify-between">
-                                <h1 class="text-[18px] font-[700]">44,50 ₽</h1>
-                    
-                            </div>
-                            <div class="flex justify-between invisible">
-                                <p class="text-[#BFBFBF] text-[12px] font-[400]">С картой</p>
-                                <p class="text-[#BFBFBF] text-[12px] font-[400]">Обычная</p>
-                            </div>
-                            <p class="text-[17px] font-[400] font-rubik pt-[5px] pb-[5px] line-clamp-2">Колбаса сырокопченая МЯСНАЯ ИСТОРИЯ
-                                Сальчичон и Тоскан</p>
-                            <span class="flex pb-[10px] space-x-1"><img style="width: 16px; height: 16px;" src="./assets/images/star.svg"
-                                    alt=""><img style="width: 16px; height: 16px;" src="./assets/images/star.svg" alt=""><img
-                                    style="width: 16px; height: 16px;" src="./assets/images/star.svg" alt=""><img
-                                    style="width: 16px; height: 16px;" src="./assets/images/star.svg" alt=""><img
-                                    style="width: 16px; height: 16px;" src="./assets/images/star.svg" alt=""></span>
-                            <button
-                                class="cursor-pointer w-[258px] w-full h-[40px] rounded-[4px] border-[1px] border-[#70C05B] text-[#70C05B] text-[16px] font-[400] font-rubik hover:bg-[#FF6633] hover:border-[#FF6633] hover:text-[white] duration-300">В
-                                корзину</button>
-                        </div>
-                    </div>
-                    </div>
-                    
-                    <div class="flex flex-col gap-[30px]">
-                         <div
-                        class="w-[160px] sm:w-[204px] md:w-[224px] xl:w-[272px]  max-h-[343px] sm:max-h-[349px] bg-[white] rounded-[4px] shadow-md hover:shadow-orange-300 hover:shadow-xl duration-300">
-                        <div class="relative w-full">
-                            <img class="block w-full h-full object-contain" style="max-width:100%; height:auto;"
-                                src="./assets/images/sausages.png" alt="">
-
-                            <img style="width: 29px; height: 28px;"
-                                class="absolute top-[12px] right-[12px] p-[4px] rounded-[4px] bg-[#F3F2F1] opacity-[50%] cursor-pointer"
-                                src="./assets/images/heart.svg" alt="">
-                        </div>
-        
-                        <div class="p-[8px]">
-                            <div class="flex justify-between">
-                                <h1 class="text-[18px] font-[700]">44,50 ₽</h1>
-
-                            </div>
-                            <div class="flex justify-between invisible">
-                                <p class="text-[#BFBFBF] text-[12px] font-[400]">С картой</p>
-                                <p class="text-[#BFBFBF] text-[12px] font-[400]">Обычная</p>
-                            </div>
-                            <p class="text-[17px] font-[400] font-rubik pt-[5px] pb-[5px] line-clamp-2">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</p>
-                            <span class="flex pb-[10px] space-x-1"><img style="width: 16px; height: 16px;"
-                                    src="./assets/images/star.svg" alt=""><img style="width: 16px; height: 16px;"
-                                    src="./assets/images/star.svg" alt=""><img style="width: 16px; height: 16px;"
-                                    src="./assets/images/empty-star.svg" alt=""><img style="width: 16px; height: 16px;"
-                                    src="./assets/images/empty-star.svg" alt=""><img style="width: 16px; height: 16px;"
-                                    src="./assets/images/empty-star.svg" alt=""></span>
-                            <button
-                                class="cursor-pointer w-[258px] w-full h-[40px] rounded-[4px] border-[1px] border-[#70C05B] text-[#70C05B] text-[16px] font-[400] font-rubik hover:bg-[#FF6633] hover:border-[#FF6633] hover:text-[white] duration-300">В
-                                корзину</button>
-                        </div>
-                    </div>
-
-                    <div
-                        class="sm:hidden w-[160px] sm:w-[204px] md:w-[224px] xl:w-[272px]  max-h-[343px] sm:max-h-[349px] bg-[white] rounded-[4px] shadow-md hover:shadow-orange-300 hover:shadow-xl duration-300">
-                        <div class="relative w-full">
-                            <img class="block w-full h-full object-contain" style="max-width:100%; height:auto;"
-                                src="./assets/images/sausages.png" alt="">
-                    
-                            <img style="width: 29px; height: 28px;"
-                                class="absolute top-[12px] right-[12px] p-[4px] rounded-[4px] bg-[#F3F2F1] opacity-[50%] cursor-pointer"
-                                src="./assets/images/heart.svg" alt="">
-                        </div>
-                    
-                        <div class="p-[8px]">
-                            <div class="flex justify-between">
-                                <h1 class="text-[18px] font-[700]">44,50 ₽</h1>
-                    
-                            </div>
-                            <div class="flex justify-between invisible">
-                                <p class="text-[#BFBFBF] text-[12px] font-[400]">С картой</p>
-                                <p class="text-[#BFBFBF] text-[12px] font-[400]">Обычная</p>
-                            </div>
-                            <p class="text-[17px] font-[400] font-rubik pt-[5px] pb-[5px] line-clamp-2">Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ
-                                GS12»</p>
-                            <span class="flex pb-[10px] space-x-1"><img style="width: 16px; height: 16px;" src="./assets/images/star.svg"
-                                    alt=""><img style="width: 16px; height: 16px;" src="./assets/images/star.svg" alt=""><img
-                                    style="width: 16px; height: 16px;" src="./assets/images/empty-star.svg" alt=""><img
-                                    style="width: 16px; height: 16px;" src="./assets/images/empty-star.svg" alt=""><img
-                                    style="width: 16px; height: 16px;" src="./assets/images/empty-star.svg" alt=""></span>
-                            <button
-                                class="cursor-pointer w-[258px] w-full h-[40px] rounded-[4px] border-[1px] border-[#70C05B] text-[#70C05B] text-[16px] font-[400] font-rubik hover:bg-[#FF6633] hover:border-[#FF6633] hover:text-[white] duration-300">В
-                                корзину</button>
-                        </div>
-                    </div>
-                    </div>
-                    
-                    <div class="flex flex-col gap-[30px]">
-                        <div
-                        class="w-[160px] sm:w-[204px] md:w-[224px] xl:w-[272px]  max-h-[343px] sm:max-h-[349px] bg-[white] rounded-[4px] shadow-md hover:shadow-orange-300 hover:shadow-xl duration-300">
-                        <div class="relative w-full">
-                            <img class="block w-full h-full object-contain" style="max-width:100%; height:auto;"
-                                src="./assets/images/milk.png" alt="">
-
-                            <img style="width: 29px; height: 28px;"
-                                class="absolute top-[12px] right-[12px] p-[4px] rounded-[4px] bg-[#F3F2F1] opacity-[50%] cursor-pointer"
-                                src="./assets/images/heart.svg" alt="">
-                        </div>
-        
-                        <div class="p-[8px]">
-                            <div class="flex justify-between">
-                                <h1 class="text-[18px] font-[700]">49,39 ₽</h1>
-
-                            </div>
-                            <div class="flex justify-between invisible">
-                                <p class="text-[#BFBFBF] text-[12px] font-[400]">С картой</p>
-                                <p class="text-[#BFBFBF] text-[12px] font-[400]">Обычная</p>
-                            </div>
-                            <p class="text-[17px] font-[400] font-rubik pt-[5px] pb-[5px] line-clamp-2">Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...</p>
-                            <span class="flex pb-[10px] space-x-1"><img style="width: 16px; height: 16px;"
-                                    src="./assets/images/star.svg" alt=""><img style="width: 16px; height: 16px;"
-                                    src="./assets/images/star.svg" alt=""><img style="width: 16px; height: 16px;"
-                                    src="./assets/images/star.svg" alt=""><img style="width: 16px; height: 16px;"
-                                    src="./assets/images/star.svg" alt=""><img style="width: 16px; height: 16px;"
-                                    src="./assets/images/star.svg" alt=""></span>
-                            <button
-                                class="cursor-pointer w-[258px] w-full h-[40px] rounded-[4px] border-[1px] border-[#70C05B] text-[#70C05B] text-[16px] font-[400] font-rubik hover:bg-[#FF6633] hover:border-[#FF6633] hover:text-[white] duration-300">В
-                                корзину</button>
-                        </div>
-                    </div>
-
-                    <div
-                        class="sm:hidden w-[160px] sm:w-[204px] md:w-[224px] xl:w-[272px]  max-h-[343px] sm:max-h-[349px] bg-[white] rounded-[4px] shadow-md hover:shadow-orange-300 hover:shadow-xl duration-300">
-                        <div class="relative w-full">
-                            <img class="block w-full h-full object-contain" style="max-width:100%; height:auto;"
-                                src="./assets/images/milk.png" alt="">
-                    
-                            <img style="width: 29px; height: 28px;"
-                                class="absolute top-[12px] right-[12px] p-[4px] rounded-[4px] bg-[#F3F2F1] opacity-[50%] cursor-pointer"
-                                src="./assets/images/heart.svg" alt="">
-                        </div>
-                    
-                        <div class="p-[8px]">
-                            <div class="flex justify-between">
-                                <h1 class="text-[18px] font-[700]">49,39 ₽</h1>
-                    
-                            </div>
-                            <div class="flex justify-between invisible">
-                                <p class="text-[#BFBFBF] text-[12px] font-[400]">С картой</p>
-                                <p class="text-[#BFBFBF] text-[12px] font-[400]">Обычная</p>
-                            </div>
-                            <p class="text-[17px] font-[400] font-rubik pt-[5px] pb-[5px] line-clamp-2">Молоко ПРОСТОКВАШИНО паст. питьевое
-                                цельное отборное...</p>
-                            <span class="flex pb-[10px] space-x-1"><img style="width: 16px; height: 16px;" src="./assets/images/star.svg"
-                                    alt=""><img style="width: 16px; height: 16px;" src="./assets/images/star.svg" alt=""><img
-                                    style="width: 16px; height: 16px;" src="./assets/images/star.svg" alt=""><img
-                                    style="width: 16px; height: 16px;" src="./assets/images/star.svg" alt=""><img
-                                    style="width: 16px; height: 16px;" src="./assets/images/star.svg" alt=""></span>
-                            <button
-                                class="cursor-pointer w-[258px] w-full h-[40px] rounded-[4px] border-[1px] border-[#70C05B] text-[#70C05B] text-[16px] font-[400] font-rubik hover:bg-[#FF6633] hover:border-[#FF6633] hover:text-[white] duration-300">В
-                                корзину</button>
-                        </div>
-                    </div>
-                    </div> -->
-                    
-        
                 </div>
         
             </div>
@@ -849,7 +576,8 @@
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="./js/products-data/products-data.js"></script>
-        <script src="./js/products.js"></script>
+        <script src="./js/cart.js"></script>
+        <script src="./js/products.js"></script> 
         <script src="./js/search.js"></script>
         <script src="./js/main.js"></script>
 </body>

@@ -3,8 +3,14 @@ let discountCards = document.querySelector(".dis-cards");
 
 let discountFilterProducts = products.filter((el) => el.discount > 0);
 let discountFourSliceProducts = discountFilterProducts.slice(discountFilterProducts.length -4, discountFilterProducts.length);
+
 let recentProducts = document.querySelector(".recent-products");
 let recentFourProducts = products.slice(products.length -4, products.length);
+
+function addtoCart(id) {
+    let item = products.find((el) => el.id === id);
+    cart.push(item)
+}
 
 discountFourSliceProducts.map((el) => {
     discountCards.innerHTML +=
@@ -140,9 +146,12 @@ discountFourSliceProducts.map((el) => {
 
                             }
 
-                            <button
+                            <button onClick = "addtoCart(${el.id})"
                                 class="cursor-pointer w-[258px] w-full h-[40px] rounded-[4px] border-[1px] border-[#70C05B] text-[#70C05B] text-[16px] font-[400] font-rubik hover:bg-[#FF6633] hover:border-[#FF6633] hover:text-[white] duration-300">В
                                 корзину</button>
+                                <div>
+                                     
+                                </div>
                         </div>
                     </div></a>
 
@@ -291,7 +300,7 @@ products.map((el) => {
     productCards.innerHTML +=
     `
      <div class="cards flex flex-col gap-[30px]">
-                        <a href="./pages/product.html"><div
+                        <a href="./pages/product.html?id=${el.id}"><div
                         class="my-[20px] overflow-hidden w-full max-w-[572px] bg-[white] rounded-[4px] shadow-md hover:shadow-orange-300 hover:shadow-xl duration-300">
                         <div class="relative overflow-hidden w-full h-[160px] ">
                             <img class="w-full" style="max-width:100%; height:auto;"
@@ -469,7 +478,7 @@ recentFourProducts.map((el) => {
     recentProducts.innerHTML +=
         `
      <div class="dis-cards flex flex-col gap-[30px]">
-                        <a href="./pages/product.html"><div
+                        <a href="./pages/product.html?id=${el.id}"><div
                         class="my-[20px] overflow-hidden w-full max-w-[572px] bg-[white] rounded-[4px] shadow-md hover:shadow-orange-300 hover:shadow-xl duration-300">
                         <div class="relative overflow-hidden w-full h-[160px] ">
                             <img class="w-full" style="max-width:100%; height:auto;"

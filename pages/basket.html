@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header class="py-[11px] px-[20px] bg-[white] border-b-[3px] border-[#E8E2C8] fixed w-full top-[0] z-[3]">
+        <div class="container mx-auto flex justify-between items-center gap-[16px]">
+            <a class="flex gap-[11px]" href="../index.html"><img class="max-w-[39px] w-full h-[32px]"
+                    src="../assets/images/logo1.svg" alt="logo">
+                <p class="hidden sm:flex">СЕВЕРЯНОЧКА</p>
+            </a>
+            <button id="toggle-btn"
+                class="hidden sm:flex gap-[15px] bg-[#70C05B] max-w-[40px] 2xl:max-w-[140px] xl:max-w-[140px] md:max-w-[140px] lg:max-w-[40px] w-full h-[40px] cursor-pointer items-center p-[8px] text-[white] rounded-[8px]"><a
+                    class="flex gap-[15px]"><img src="../assets/images/menu.svg" alt="">
+                    <p class="hidden md:flex lg:hidden xl:flex">Каталог</p>
+                </a>
+            </button>
+            <form>
+                <div class="flex relative">
+                    <input id="search"
+                        class="max-w-[520px] sm:max-w-[280px] xl:w-[336px] h-[40px] rounded-l-[8px] border-[2px] border-solid border-[#70C05B] px-[16px] outline-neutral-500 border-r-0 border-r-transparent "
+                        type="search" name="" placeholder="Найти товар" id="">
+                    <button
+                        class="w-[40px] h-[40px] rounded-r-[8px] border-[2px] border-green-500 outline-neutral-500 border-l-0 pl-[7px] cursor-pointer"><img
+                            src="../assets/images/search.svg" alt=""></button>
+                    <div
+                        class="search-cards overflow-y-scroll overflow-hidden max-h-[500px] w-full absolute py-[10px] top-[50px] rounded-[8px] border-[2px] border-solid border-[#70C05B] px-[16px] outline-neutral-500 bg-[white]">
+                    </div>
+                </div>
+            </form>
+            <ul class="flex gap-[24px] hidden lg:flex">
+                <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center"
+                        href="../pages/favourites.html"><img src="../assets/images/favourites.svg" alt="">Избранное</a>
+                </li>
+                <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center"
+                        href="../pages/all_products.html"><img src="../assets/images/products.svg" alt="">Продукты</a>
+                </li>
+                <li class="place-items-center"><a class="flex flex-col items-center" href="../pages/basket.html"><img
+                            src="../assets/images/shop.svg" alt="">Корзина</a></li>
+            </ul>
+            <div class="hidden sm:flex items-center gap-[10px]">
+                <img class="w-[40px] h-[40px]" src="../assets/images/avatar.png" alt="">
+                <h1 class="pr-[15px] hidden lg:flex">Алексей</h1>
+                <img src="../assets/images/arrow down.svg" alt="">
+            </div>
+
+        </div>
+    </header>
+
+    <div id="res-menu"
+        class="hidden duration-600 bg-[white] sm:flex translate-y-[-100%] fixed w-full top-[0] z-[2] pt-[65px] border-b-[3px] border-[#E8E2C8]">
+        <ul
+            class=" px-[20px] sm:grid py-[20px] md:py-[30px] container mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px] md:gap-[20px] lg:gap-[30px]">
+            <li><a class="font-bold" href="">Молоко, сыр, яйцо</a></li>
+            <li><a class="font-bold" href="">Хлеб</a></li>
+            <li><a class="font-bold" href="">Фрукты и овощи</a></li>
+            <li><a class="font-bold" href="">Замороженные продукты</a></li>
+            <li><a class="font-bold" href="">Напитки</a></li>
+            <li><a class="font-bold" href="">Кондитерские изделия</a></li>
+            <li><a class="font-bold" href="">Чай, кофе</a></li>
+            <li><a class="font-bold" href="">Бакалея</a></li>
+            <li><a class="font-bold" href="">Здоровое питание</a></li>
+            <li><a class="font-bold" href="">Зоотовары</a></li>
+            <li><a class="font-bold" href="">Непродовольственные товары</a></li>
+            <li><a class="font-bold" href="">Детское питание</a></li>
+            <li><a class="font-bold" href="">Мясо, птица, колбаса</a></li>
+        </ul>
+    </div>
+
+<main>
+    <section class="bg-[#FBF8EC] px-[20px] pt-[94px] pb-[120px]">
+        <div class="container mx-auto">
+            <div class="flex items-center gap-[16px]"><a class="text-[12px] font-[400]" href="../index.html">Главная</a><img
+                    src="../assets/images/chevron-right.svg" alt="">
+                <p class="text-[12px] font-[400]">Корзина</p>
+            </div>
+            <h1 class="text-[26px] md:text-[34px] lg:text-[48px]  font-[700] pt-[30px] pb-[40px]">Корзина</h1>
+            
+
+            <div class="flex items-center gap-[56px]">
+                <div class="flex items-center gap-[5px]">
+                     <img src="../assets/images/Checkbox.svg" alt="">
+                     <p>Выделить всё</p>
+                </div>
+                <div>
+                    <p>Удалить выбранные</p>
+                </div>
+            </div>
+            
+            <div class="flex justify-between w-full">
+                 <div class="w-full">
+                <div class="flex w-full mt-[30px] max-w-[1000px] h-[72px] bg-[white] justify-between rounded-[5px] shadow-md hover:shadow-orange-300 duration-400">
+                    <div class="flex items-center gap-[10px]">
+                        <div class="relative">
+                            <img src="../assets/images/Item (3).png" alt="">
+                            <div class="absolute top-[0] w-full">
+                                <input class="w" type="checkbox">
+                            </div>
+                
+                        </div>
+                        <div class="flex flex-col">
+                            <h1>Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</h1>
+                            <span class="flex gap-[20px]">
+                                <h3>44,50 ₽</h3>
+                                <p>за шт.</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex items-center pr-[10px] gap-[56px]">
+                        <div class="p-[8px] bg-[#70C05B] flex gap-[15px] rounded-[6px]">
+                            <button class="cursor-pointer"><img src="../assets/images/minus.svg" alt=""></button>
+                            <p class="text-[white]">1</p>
+                            <button class="cursor-pointer"><img src="../assets/images/plus.svg" alt=""></button>
+                        </div>
+                        <div>
+                            <h1 class="text-[18px] font-bold">
+                                89,00 ₽
+                            </h1>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="flex w-full mt-[30px] max-w-[1000px] h-[72px] bg-[white] justify-between rounded-[5px] shadow-md hover:shadow-orange-300 duration-400">
+                        <div class="flex items-center gap-[10px]">
+                            <div class="relative">
+                                <img src="../assets/images/Item (3).png" alt="">
+                                <div class="absolute top-[0] w-full">
+                                    <input class="w" type="checkbox">
+                                </div>
+                    
+                            </div>
+                            <div class="flex flex-col">
+                                <h1>Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</h1>
+                                <span class="flex gap-[20px]">
+                                    <h3>44,50 ₽</h3>
+                                    <p>за шт.</p>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex items-center pr-[10px] gap-[56px]">
+                            <div class="p-[8px] bg-[#70C05B] flex gap-[15px] rounded-[6px]">
+                                <button class="cursor-pointer"><img src="../assets/images/minus.svg" alt=""></button>
+                                <p class="text-[white]">1</p>
+                                <button class="cursor-pointer"><img src="../assets/images/plus.svg" alt=""></button>
+                            </div>
+                            <div>
+                                <h1 class="text-[18px] font-bold">
+                                    89,00 ₽
+                                </h1>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="flex w-full mt-[30px] max-w-[1000px] h-[72px] bg-[white] justify-between rounded-[5px] shadow-md hover:shadow-orange-300 duration-400">
+                            <div class="flex items-center gap-[10px]">
+                                <div class="relative">
+                                    <img src="../assets/images/Item (3).png" alt="">
+                                    <div class="absolute top-[0] w-full">
+                                        <input class="w" type="checkbox">
+                                    </div>
+                        
+                                </div>
+                                <div class="flex flex-col">
+                                    <h1>Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</h1>
+                                    <span class="flex gap-[20px]">
+                                        <h3>44,50 ₽</h3>
+                                        <p>за шт.</p>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex items-center pr-[10px] gap-[56px]">
+                                <div class="p-[8px] bg-[#70C05B] flex gap-[15px] rounded-[6px]">
+                                    <button class="cursor-pointer"><img src="../assets/images/minus.svg" alt=""></button>
+                                    <p class="text-[white]">1</p>
+                                    <button class="cursor-pointer"><img src="../assets/images/plus.svg" alt=""></button>
+                                </div>
+                                <div>
+                                    <h1 class="text-[18px] font-bold">
+                                        89,00 ₽
+                                    </h1>
+                                </div>
+                            </div> 
+                     </div> 
+                    </div>
+                    <div class="flex ">
+                        <div class="flex flex-col max-w-[550px] w-full gap-[30px]">
+                            <div class="flex items-center gap-[24px]">
+                                <div class="switch-wrapper-basic-2">
+                                <input class="tgl-basic-2 tgl-light-basic-2" id="switch-basic-2" type="checkbox" />
+                                <label class="tgl-btn-basic-2" for="switch-basic-2"></label>
+                            </div>
+                            <style>
+                                .switch-wrapper-basic-2 .tgl-basic-2 {
+                                    display: none;
+                                }
+                            
+                                .switch-wrapper-basic-2,
+                                .switch-wrapper-basic-2 *,
+                                .switch-wrapper-basic-2 *:after,
+                                .switch-wrapper-basic-2 *:before {
+                                    box-sizing: border-box;
+                                }
+                            
+                                .switch-wrapper-basic-2 .tgl-basic-2::selection,
+                                .switch-wrapper-basic-2 .tgl-basic-2:after::selection,
+                                .switch-wrapper-basic-2 .tgl-basic-2:before::selection,
+                                .switch-wrapper-basic-2 .tgl-basic-2 *::selection,
+                                .switch-wrapper-basic-2 .tgl-basic-2 *:after::selection,
+                                .switch-wrapper-basic-2 .tgl-basic-2 *:before::selection,
+                                .switch-wrapper-basic-2 .tgl-basic-2+.tgl-btn-basic-2::selection {
+                                    background: none;
+                                }
+                            
+                                .switch-wrapper-basic-2 .tgl-basic-2+.tgl-btn-basic-2 {
+                                    outline: 0;
+                                    display: block;
+                                    width: 64px;
+                                    height: 32px;
+                                    position: relative;
+                                    cursor: pointer;
+                                    user-select: none;
+                                }
+                            
+                                .switch-wrapper-basic-2 .tgl-basic-2+.tgl-btn-basic-2:after,
+                                .switch-wrapper-basic-2 .tgl-basic-2+.tgl-btn-basic-2:before {
+                                    position: relative;
+                                    display: block;
+                                    content: "";
+                                    width: 50%;
+                                    height: 100%;
+                                }
+                            
+                                .switch-wrapper-basic-2 .tgl-basic-2+.tgl-btn-basic-2:after {
+                                    left: 0;
+                                }
+                            
+                                .switch-wrapper-basic-2 .tgl-basic-2+.tgl-btn-basic-2:before {
+                                    display: none;
+                                }
+                            
+                                .switch-wrapper-basic-2 .tgl-basic-2:checked+.tgl-btn-basic-2:after {
+                                    left: 50%;
+                                }
+                            
+                                .switch-wrapper-basic-2 .tgl-light-basic-2+.tgl-btn-basic-2 {
+                                    background: #c7c6c6;
+                                    border-radius: 32px;
+                                    padding: 2px;
+                                    transition: all 0.4s ease;
+                                }
+                            
+                                .switch-wrapper-basic-2 .tgl-light-basic-2+.tgl-btn-basic-2:after {
+                                    border-radius: 50%;
+                                    background: #fff;
+                                    transition: all 0.2s ease;
+                                }
+                            
+                                .switch-wrapper-basic-2 .tgl-light-basic-2:checked+.tgl-btn-basic-2 {
+                                    background: #07d57b;
+                                }
+                            </style>
+                            
+                                    <h3 class="whitespace-nowrap">Списать 200 ₽</h3>
+                                </div>
+                            <p>На карте накоплено 200 ₽</p>
+                            <hr>
+                            <div class="flex justify-between"><p>3 товара</p><p>258,10 ₽</p></div>
+                            <div class="flex justify-between"><p>Скидка</p><p>-8,01 ₽</p></div>
+                            <hr>
+                            <div class="flex justify-between"><p>Итог</p><h1>250,09 ₽</h1></div>
+                            <p class=""><img src="../assets/images/smile.svg" alt="">Вы получяете 100 бонусов</p>
+                            <p>Минимальная сумма заказа 1000р</p>
+                            <button>Оформить заказ</button>
+                        </div>
+                        
+                    </div>
+            </div>
+            
+
+        </div>
+    </section>
+</main>
+
+<footer class=" pt-[24px] pb-[58px] bg-[#FBe8c9] px-[20px]">
+    <div class="container mx-auto flex justify-between ">
+
+        <div class="flex flex-col md:flex-row items-center gap-[20px] block">
+            <div class="flex justify-self-start"><a href=""><img src="../assets/images/logo.svg" alt=""></a></div>
+
+            <div class="flex gap-[20px] flex-wrap">
+                <a class="text-[12px] flex white-space" href="../pages/about_us.html">О компании</a>
+                <a class="text-[12px]" href="../pages/contacts.html">Контакты</a>
+                <a class="text-[12px]" href="../pages/vacancies.html">Вакансии</a>
+                <a class="text-[12px]" href="">Статьи</a>
+                <a class="text-[12px]" href="">Политика обработки персональных данных</a>
+            </div>
+
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center gap-[16px]">
+            <div class="flex md:grid md:grid-cols-2 gap-[20px] lg:flex">
+                <a href=""><img class="max-w-[24px]" src="../assets/images/instagram.svg" alt=""></a>
+                <a href=""><img class="max-w-[24px]" src="../assets/images/vkontakte.svg" alt=""></a>
+                <a href=""><img class="max-w-[24px]" src="../assets/images/facebook.svg" alt=""></a>
+                <a href=""><img class="max-w-[24px]" src="../assets/images/ok.svg" alt=""></a>
+            </div>
+
+            <div class="flex items-center pl-[24px] gap-[8px] whitespace-nowrap"><img src="../assets/images/phone.svg"
+                    alt=""><a href="">
+                    <p>8 800 777 33 33</p>
+                </a></div>
+        </div>
+
+
+    </div>
+</footer>
+
+<section class=" sm:hidden py-[5px] px-[20px] bg-[white] border-t-[3px] border-[#E8E2C8] fixed w-full bottom-[0] z-[2]">
+    <div class="container mx-auto">
+        <ul class="flex gap-[5px] sm:hidden items-center justify-between">
+            <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center text-[14px]"
+                    href="../pages/catalog.html"><img src="../assets/images/Frame 211.svg" alt="">Каталог</a></li>
+            <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center text-[14px]"
+                    href="../pages/favourites.html"><img src="../assets/images/favourites.svg" alt="">Избранное</a></li>
+            <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center text-[14px]"
+                    href="../pages/basket.html"><img src="../assets/images/shop.svg" alt="">Корзина</a></li>
+            <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center text-[14px]"
+                    href="../pages/all_products.html"><img src="../assets/images/products.svg" alt="">Продукты</a></li>
+            <li class="place-items-center pt-[5px]"><img class="w-[40px] h-[40px]" src="../assets/images/avatar.png"
+                    alt="">
+                <h1 class="pr-[15px] hidden lg:flex">Алексей</h1>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script src="../js/products-data/products-data.js"></script>
+<script src="../js/product_page.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../js/products-data/products-data.js"></script>
+<script src="../js/product_page.js"></script>
+<script src="../js/products.js"></script>
+<script src="../js/search-others.js"></script>
+<script src="../js/main.js"></script>
+</body>
+
+</html>

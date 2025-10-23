@@ -49,8 +49,10 @@
                 <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center"
                         href="../pages/all_products.html"><img src="../assets/images/products.svg" alt="">Продукты</a>
                 </li>
-                <li class="place-items-center"><a class="flex flex-col items-center" href="../pages/basket.html"><img
-                            src="../assets/images/shop.svg" alt="">Корзина</a></li>
+                <li class="items-center pt-[5px]"><a class="flex flex-col items-center relative" href="./pages/basket.html"><img
+                            class="w-[24px]" src="../assets/images/Cart2.svg" alt="">Корзина <span id="badge"
+                            class="absolute top-[-10px] right-[7px] bg-[red] rounded-full px-[5px] text-[white] text-[12px]"></span></a>
+                </li>
             </ul>
             <div class="hidden sm:flex items-center gap-[10px]">
                 <img class="w-[40px] h-[40px]" src="../assets/images/avatar.png" alt="">
@@ -93,110 +95,21 @@
 
             <div class="flex items-center gap-[56px]">
                 <div class="flex items-center gap-[5px]">
-                     <img src="../assets/images/Checkbox.svg" alt="">
+                     <input id="all-check" type="checkbox" class="w-[24px] h-[24px]">
                      <p>Выделить всё</p>
                 </div>
                 <div>
-                    <p>Удалить выбранные</p>
+                    <p class="text-[18px] hover:text-[red] duration-300 cursor-pointer" id="remove">Удалить выбранные</p>
                 </div>
             </div>
             
-            <div class="flex justify-between w-full">
-                 <div class="w-full">
-                <div class="flex w-full mt-[30px] max-w-[1000px] h-[72px] bg-[white] justify-between rounded-[5px] shadow-md hover:shadow-orange-300 duration-400">
-                    <div class="flex items-center gap-[10px]">
-                        <div class="relative">
-                            <img src="../assets/images/Item (3).png" alt="">
-                            <div class="absolute top-[0] w-full">
-                                <input class="w" type="checkbox">
-                            </div>
+            <div class="flex flex-col items-start md:flex md:flex-row justify-between w-full gap-[30px] ">
+                 <div id="cart-cards" class="w-full">
                 
-                        </div>
-                        <div class="flex flex-col">
-                            <h1>Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</h1>
-                            <span class="flex gap-[20px]">
-                                <h3>44,50 ₽</h3>
-                                <p>за шт.</p>
-                            </span>
-                        </div>
                     </div>
-                    <div class="flex items-center pr-[10px] gap-[56px]">
-                        <div class="p-[8px] bg-[#70C05B] flex gap-[15px] rounded-[6px]">
-                            <button class="cursor-pointer"><img src="../assets/images/minus.svg" alt=""></button>
-                            <p class="text-[white]">1</p>
-                            <button class="cursor-pointer"><img src="../assets/images/plus.svg" alt=""></button>
-                        </div>
-                        <div>
-                            <h1 class="text-[18px] font-bold">
-                                89,00 ₽
-                            </h1>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="flex w-full mt-[30px] max-w-[1000px] h-[72px] bg-[white] justify-between rounded-[5px] shadow-md hover:shadow-orange-300 duration-400">
-                        <div class="flex items-center gap-[10px]">
-                            <div class="relative">
-                                <img src="../assets/images/Item (3).png" alt="">
-                                <div class="absolute top-[0] w-full">
-                                    <input class="w" type="checkbox">
-                                </div>
-                    
-                            </div>
-                            <div class="flex flex-col">
-                                <h1>Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</h1>
-                                <span class="flex gap-[20px]">
-                                    <h3>44,50 ₽</h3>
-                                    <p>за шт.</p>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex items-center pr-[10px] gap-[56px]">
-                            <div class="p-[8px] bg-[#70C05B] flex gap-[15px] rounded-[6px]">
-                                <button class="cursor-pointer"><img src="../assets/images/minus.svg" alt=""></button>
-                                <p class="text-[white]">1</p>
-                                <button class="cursor-pointer"><img src="../assets/images/plus.svg" alt=""></button>
-                            </div>
-                            <div>
-                                <h1 class="text-[18px] font-bold">
-                                    89,00 ₽
-                                </h1>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="flex w-full mt-[30px] max-w-[1000px] h-[72px] bg-[white] justify-between rounded-[5px] shadow-md hover:shadow-orange-300 duration-400">
-                            <div class="flex items-center gap-[10px]">
-                                <div class="relative">
-                                    <img src="../assets/images/Item (3).png" alt="">
-                                    <div class="absolute top-[0] w-full">
-                                        <input class="w" type="checkbox">
-                                    </div>
-                        
-                                </div>
-                                <div class="flex flex-col">
-                                    <h1>Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»</h1>
-                                    <span class="flex gap-[20px]">
-                                        <h3>44,50 ₽</h3>
-                                        <p>за шт.</p>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="flex items-center pr-[10px] gap-[56px]">
-                                <div class="p-[8px] bg-[#70C05B] flex gap-[15px] rounded-[6px]">
-                                    <button class="cursor-pointer"><img src="../assets/images/minus.svg" alt=""></button>
-                                    <p class="text-[white]">1</p>
-                                    <button class="cursor-pointer"><img src="../assets/images/plus.svg" alt=""></button>
-                                </div>
-                                <div>
-                                    <h1 class="text-[18px] font-bold">
-                                        89,00 ₽
-                                    </h1>
-                                </div>
-                            </div> 
-                     </div> 
-                    </div>
-                    <div class="flex ">
+                    <div class="flex justify-center w-full md:w-auto">
                         <div class="flex flex-col max-w-[550px] w-full gap-[30px]">
-                            <div class="flex items-center gap-[24px]">
+                            <div class="flex items-center justify-between">
                                 <div class="switch-wrapper-basic-2">
                                 <input class="tgl-basic-2 tgl-light-basic-2" id="switch-basic-2" type="checkbox" />
                                 <label class="tgl-btn-basic-2" for="switch-basic-2"></label>
@@ -276,13 +189,14 @@
                                 </div>
                             <p>На карте накоплено 200 ₽</p>
                             <hr>
-                            <div class="flex justify-between"><p>3 товара</p><p>258,10 ₽</p></div>
-                            <div class="flex justify-between"><p>Скидка</p><p>-8,01 ₽</p></div>
+                            <div class="flex justify-between"><p><span id="badge"></span> товара</p><span class="flex gap-[5px]"><p id="all-price"></p>₽</span></div>
+                            <div class="flex justify-between"><p>Скидка</p><span class="flex gap-[5px]"><p id="all-discounts"></p>₽</span></div>
                             <hr>
-                            <div class="flex justify-between"><p>Итог</p><h1>250,09 ₽</h1></div>
-                            <p class=""><img src="../assets/images/smile.svg" alt="">Вы получяете 100 бонусов</p>
-                            <p>Минимальная сумма заказа 1000р</p>
-                            <button>Оформить заказ</button>
+                            <div class="flex justify-between"><p>Итог</p><span class="flex gap-[5px]">
+                                <p id="final-price"></p>₽</span></div>
+                            <p class="flex items-center whitespace-nowrap gap-[10px] text-[12px] text-[#70C05B] justify-center"><img src="../assets/images/smile.svg" alt="">Вы получяете 100 бонусов</p>
+                            <p class="text-[12px] rounded-[4px] text-[white] bg-[red] py-[4px] px-[8px] whitespace-nowrap text-center">Минимальная сумма заказа 1000р</p>
+                            <button class="text-[24px] text-[orange] bg-orange-200 px-[32px] py-[16px] whitespace-nowrap cursor-pointer hover:bg-[#FF6633] hover:text-[white] rounded-[6px] duration-300">Оформить заказ</button>
                         </div>
                         
                     </div>
@@ -348,16 +262,16 @@
 
 <script src="../js/products-data/products-data.js"></script>
 <script src="../js/product_page.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
     integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
     integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="../js/products-data/products-data.js"></script>
-<script src="../js/product_page.js"></script>
 <script src="../js/products.js"></script>
 <script src="../js/search-others.js"></script>
+<script src="../js/cart.js"></script>
 <script src="../js/main.js"></script>
 </body>
 

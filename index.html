@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,53 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
 
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
 
 </head>
-<body>  
-    
+
+<body>
+
     <div id="loading" class="fixed w-full h-full z-[4] duration-600">
         <img class="w-full h-full" src="./assets/images/Dual Ball@1x-1.0s-203px-203px.svg" alt="loading">
     </div>
@@ -24,61 +63,85 @@
 
     <header class="py-[11px] px-[20px] bg-[white] border-b-[3px] border-[#E8E2C8] fixed w-full top-[0] z-[3]">
         <div class="container mx-auto flex justify-between items-center gap-[16px]">
-            <a class="flex gap-[11px]" href=""><img class="max-w-[39px] w-full h-[32px]" src="./assets/images/logo1.svg" alt="logo"><p class="hidden sm:flex">СЕВЕРЯНОЧКА</p></a>
-            <button id="toggle-btn" class="hidden sm:flex gap-[15px] bg-[#70C05B] max-w-[40px] 2xl:max-w-[140px] xl:max-w-[140px] md:max-w-[140px] lg:max-w-[40px] w-full h-[40px] cursor-pointer items-center p-[8px] text-[white] rounded-[8px]"><a class="flex gap-[15px]"><img src="./assets/images/menu.svg" alt=""> <p class="hidden md:flex lg:hidden xl:flex">Каталог</p></a></button>
+            <a class="flex gap-[11px]" href=""><img class="max-w-[39px] w-full h-[32px]" src="./assets/images/logo1.svg"
+                    alt="logo">
+                <p class="hidden sm:flex">СЕВЕРЯНОЧКА</p>
+            </a>
+            <button id="toggle-btn"
+                class="hidden sm:flex gap-[15px] bg-[#70C05B] max-w-[40px] 2xl:max-w-[140px] xl:max-w-[140px] md:max-w-[140px] lg:max-w-[40px] w-full h-[40px] cursor-pointer items-center p-[8px] text-[white] rounded-[8px]"><a
+                    class="flex gap-[15px]"><img src="./assets/images/menu.svg" alt="">
+                    <p class="hidden md:flex lg:hidden xl:flex">Каталог</p>
+                </a></button>
             <form class="flex flex-col gap-[5px]">
                 <div class="flex relative">
-                <input id="search" class="max-w-[520px] sm:max-w-[280px] xl:w-[336px] h-[40px] rounded-l-[8px] border-[2px] border-solid border-[#70C05B] px-[16px] outline-neutral-500 border-r-0 border-r-transparent " type="search" name="" placeholder="Найти товар" id="">
-                <button class="w-[40px] h-[40px] rounded-r-[8px] border-[2px] border-green-500 outline-neutral-500 border-l-0 pl-[7px] cursor-pointer"><img src="./assets/images/search.svg" alt=""></button>    
-                <div class="search-cards overflow-y-scroll overflow-hidden max-h-[500px] w-full absolute py-[10px] top-[50px] rounded-[8px] border-[2px] border-solid border-[#70C05B] px-[16px] outline-neutral-500 bg-[white]">
-            </div>
-        </div>
-                
-            </form>
-            
-
-                <ul class="flex gap-[24px] hidden lg:flex">
-                    <li class="items-center pt-[5px]"><a class="flex flex-col items-center" href="./pages/favourites.html"><img src="./assets/images/favourites.svg" alt="">Избранное</a></li>
-                    <li class="items-center pt-[5px]"><a class="flex flex-col items-center" href="./pages/all_products.html"><img src="./assets/images/products.svg" alt="">Продукты</a></li>
-                    <li class="items-center pt-[5px]"><a class="flex flex-col items-center relative" href="./pages/basket.html"><img class="w-[24px]" src="./assets/images/Cart2.svg"  alt="">Корзина <span class="absolute top-[-10px] right-[7px] bg-[red] rounded-full px-[5px] text-[white] text-[12px]">1</span></a></li>
-                </ul>
-                <div class="hidden sm:flex items-center gap-[10px]">
-                    <img class="w-[40px] h-[40px]" src="./assets/images/avatar.png" alt="">
-                    <h1 class="pr-[15px] hidden lg:flex">Алексей</h1>
-                    <img src="./assets/images/arrow down.svg" alt="">
+                    <input id="search"
+                        class="max-w-[520px] sm:max-w-[280px] xl:w-[336px] h-[40px] rounded-l-[8px] border-[2px] border-solid border-[#70C05B] px-[16px] outline-neutral-500 border-r-0 border-r-transparent "
+                        type="search" name="" placeholder="Найти товар" id="">
+                    <button
+                        class="w-[40px] h-[40px] rounded-r-[8px] border-[2px] border-green-500 outline-neutral-500 border-l-0 pl-[7px] cursor-pointer"><img
+                            src="./assets/images/search.svg" alt=""></button>
+                    <div
+                        class="search-cards overflow-y-scroll overflow-hidden max-h-[500px] w-full absolute py-[10px] top-[50px] rounded-[8px] border-[2px] border-solid border-[#70C05B] px-[16px] outline-neutral-500 bg-[white]">
+                    </div>
                 </div>
-                
+
+            </form>
+
+
+            <ul class="flex gap-[24px] hidden lg:flex">
+                <li class="items-center pt-[5px]"><a class="flex flex-col items-center"
+                        href="./pages/favourites.html"><img src="./assets/images/favourites.svg" alt="">Избранное</a>
+                </li>
+                <li class="items-center pt-[5px]"><a class="flex flex-col items-center"
+                        href="./pages/all_products.html"><img src="./assets/images/products.svg" alt="">Продукты</a>
+                </li>
+                <li class="items-center pt-[5px]"><a class="flex flex-col items-center relative"
+                        href="./pages/basket.html"><img class="w-[24px]" src="./assets/images/Cart2.svg" alt="">Корзина
+                        <span id="badge"
+                            class="absolute top-[-10px] right-[7px] bg-[red] rounded-full px-[5px] text-[white] text-[12px]"></span></a>
+                </li>
+            </ul>
+            <div class="hidden sm:flex items-center gap-[10px]">
+                <img class="w-[40px] h-[40px]" src="./assets/images/avatar.png" alt="">
+                <h1 class="pr-[15px] hidden lg:flex">Алексей</h1>
+                <img src="./assets/images/arrow down.svg" alt="">
+            </div>
+
         </div>
     </header>
 
-    <div id="res-menu" class="all-categories hidden duration-600 bg-[white] sm:flex translate-y-[-100%] fixed w-full top-[0] z-[2] pt-[65px] border-b-[3px] border-[#E8E2C8]">
-      <ul class=" px-[20px] sm:grid py-[20px] md:py-[30px] container mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px] md:gap-[20px] lg:gap-[30px]">
-        <li><a class="font-bold" href="">Молоко, сыр, яйцо</a></li>
-        <li><a class="font-bold" href="">Хлеб</a></li>
-        <li><a class="font-bold" href="">Фрукты и овощи</a></li>
-        <li><a class="font-bold" href="">Замороженные продукты</a></li>
-        <li><a class="font-bold" href="">Напитки</a></li>
-        <li><a class="font-bold" href="">Кондитерские изделия</a></li>
-        <li><a class="font-bold" href="">Чай, кофе</a></li>
-        <li><a class="font-bold" href="">Бакалея</a></li>
-        <li><a class="font-bold" href="">Здоровое питание</a></li>
-        <li><a class="font-bold" href="">Зоотовары</a></li>
-        <li><a class="font-bold" href="">Непродовольственные товары</a></li>
-        <li><a class="font-bold" href="">Детское питание</a></li>
-        <li><a class="font-bold" href="">Мясо, птица, колбаса</a></li>
-    </ul>  
+    <div id="res-menu"
+        class="all-categories hidden duration-600 bg-[white] sm:flex translate-y-[-100%] fixed w-full top-[0] z-[2] pt-[65px] border-b-[3px] border-[#E8E2C8]">
+        <ul
+            class=" px-[20px] sm:grid py-[20px] md:py-[30px] container mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px] md:gap-[20px] lg:gap-[30px]">
+            <li><a class="font-bold" href="">Молоко, сыр, яйцо</a></li>
+            <li><a class="font-bold" href="">Хлеб</a></li>
+            <li><a class="font-bold" href="">Фрукты и овощи</a></li>
+            <li><a class="font-bold" href="">Замороженные продукты</a></li>
+            <li><a class="font-bold" href="">Напитки</a></li>
+            <li><a class="font-bold" href="">Кондитерские изделия</a></li>
+            <li><a class="font-bold" href="">Чай, кофе</a></li>
+            <li><a class="font-bold" href="">Бакалея</a></li>
+            <li><a class="font-bold" href="">Здоровое питание</a></li>
+            <li><a class="font-bold" href="">Зоотовары</a></li>
+            <li><a class="font-bold" href="">Непродовольственные товары</a></li>
+            <li><a class="font-bold" href="">Детское питание</a></li>
+            <li><a class="font-bold" href="">Мясо, птица, колбаса</a></li>
+        </ul>
     </div>
 
     <main>
 
         <section class="bg-[url('/assets/images/preintro.png')] bg-cover bg-no-repeat pt-[72px]">
 
-             <div class="container mx-auto flex items-center justify-center">
+            <div class="container mx-auto flex items-center justify-center">
 
-                <img class="hidden sm:flex sm:w-[180px] sm:h-[125px] md:w-[250px] md:h-[175px] lg:w-[303px] lg:h-[202px]" src="./assets/images/products.png" alt="products">
-                <h1 class="py-[30px] text-[18px] sm:text-[26px] md:text-[34px] lg:text-[48px] font-[700]">Доставка бесплатно от 1000 ₽</h1>
+                <img class="hidden sm:flex sm:w-[180px] sm:h-[125px] md:w-[250px] md:h-[175px] lg:w-[303px] lg:h-[202px]"
+                    src="./assets/images/products.png" alt="products">
+                <h1 class="py-[30px] text-[18px] sm:text-[26px] md:text-[34px] lg:text-[48px] font-[700]">Доставка
+                    бесплатно от 1000 ₽</h1>
 
-             </div>
+            </div>
 
         </section>
 
@@ -87,50 +150,57 @@
             <div class="container mx-auto">
 
                 <div class="flex items-center justify-between">
-                <h1 class="text-[24px] lg:text-[36px] font-[700] pb-[40px]">Акции</h1>    
-                <span class="flex place-items-center align-middle pb-[25px] gap-[10px]"><a class="text-[#606060]" href="./pages/all_products.html">Все продукты </a><img src="./assets/images/arrow-right.svg" alt=""></span>
+                    <h1 class="text-[24px] lg:text-[36px] font-[700] pb-[40px]">Акции</h1>
+                    <span class="flex place-items-center align-middle pb-[25px] gap-[10px]"><a class="text-[#606060]"
+                            href="./pages/all_products.html">Все продукты </a><img src="./assets/images/arrow-right.svg"
+                            alt=""></span>
                 </div>
 
-                <div id="carts" class="dis-cards owl-carousel owl-theme"> 
 
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper dis-cards">
+
+                    </div>
                 </div>
-
             </div>
 
         </section>
 
         <section class="bg-[#FBF8EC] px-[20px] pb-[120px]">
-        
+
             <div class="container mx-auto">
-        
+
                 <div class="flex items-center justify-between">
                     <h1 class="text-[24px] lg:text-[36px] font-[700] pb-[40px]">Новинки</h1>
                     <span class="flex place-items-center align-middle pb-[25px] gap-[10px]">
-                        <a class="text-[#606060]" href="./pages/all_products.html">Все продукты </a><img src="./assets/images/arrow-right.svg" alt="">
+                        <a class="text-[#606060]" href="./pages/all_products.html">Все продукты </a><img
+                            src="./assets/images/arrow-right.svg" alt="">
                     </span>
                 </div>
-        
+
                 <div class="cards owl-carousel owl-theme">
 
                 </div>
-        
+
             </div>
-        
+
         </section>
 
         <section class="bg-[#FBF8EC] px-[20px] pb-[120px]">
-        
+
             <div class="container mx-auto">
-        
+
                 <div class="flex items-center justify-between">
                     <h1 class="text-[24px] lg:text-[36px] font-[700] pb-[40px]">Покупали раньше</h1>
                     <span class="flex place-items-center align-middle pb-[25px] gap-[10px]">
-                        <a class="text-[#606060]" href="./pages/all_products.html">Все продукты </a><img src="./assets/images/arrow-right.svg" alt="">
+                        <a class="text-[#606060]" href="./pages/all_products.html">Все продукты </a><img
+                            src="./assets/images/arrow-right.svg" alt="">
                     </span>
                 </div>
-        
+
                 <div class="recent-products owl-carousel owl-theme">
-                    
+
 
                     <!-- <div class="flex flex-col gap-[30px]">
                         <div
@@ -403,39 +473,44 @@
                         </div>
                     </div>
                     </div> -->
-                    
-        
+
+
                 </div>
-        
+
             </div>
-        
+
         </section>
 
         <section class="bg-[#FBF8EC] px-[20px] pb-[120px]">
             <div class="container mx-auto">
                 <h1 class="text-[24px] lg:text-[36px] font-[700] pb-[40px]">Специальные предложения</h1>
                 <div class="block  md:flex justify-around gap-[30px]">
-                    <div class="mb-[16px] overflow-hidden w-full h-[185px] lg:h-[200px] bg-[#FCD5BA] pt-[30px] pb-[44px] pl-[40px] flex rounded-[4px] shadow-md hover:shadow-orange-300 hover:shadow-xl duration-300">
+                    <div
+                        class="mb-[16px] overflow-hidden w-full h-[185px] lg:h-[200px] bg-[#FCD5BA] pt-[30px] pb-[44px] pl-[40px] flex rounded-[4px] shadow-md hover:shadow-orange-300 hover:shadow-xl duration-300">
                         <div>
-                            <h1 class="white-space text-[20px] md:text-[18px] lg:text-[24px] font-[700]">Оформите карту «Северяночка»</h1>
-                            <p class="white-space text-[12px] lg:text-[16px] font-[400]">И получайте бонусы при покупке в магазинах и на сайте</p>
+                            <h1 class="white-space text-[20px] md:text-[18px] lg:text-[24px] font-[700]">Оформите карту
+                                «Северяночка»</h1>
+                            <p class="white-space text-[12px] lg:text-[16px] font-[400]">И получайте бонусы при покупке
+                                в магазинах и на сайте</p>
                         </div>
                         <div class="max-w-[260px]">
-                           <img class="w-full block" src="./assets/images/Карта лояльности-10 1.png" alt="">  
+                            <img class="w-full block" src="./assets/images/Карта лояльности-10 1.png" alt="">
                         </div>
-                       
+
                     </div>
 
                     <div
                         class=" overflow-hidden w-full h-[185px] lg:h-[200px] bg-[#E5FFDE] pt-[30px] pb-[44px] pl-[40px] flex rounded-[4px] shadow-md hover:shadow-green-300 hover:shadow-xl duration-300">
                         <div>
-                            <h1 class="white-space text-[20px] md:text-[18px] lg:text-[24px] font-[700]">Покупайте акционные товары</h1>
-                            <p class="white-space text-[12px] lg:text-[16px] font-[400]">И получайте вдвое больше бонусов</p>
+                            <h1 class="white-space text-[20px] md:text-[18px] lg:text-[24px] font-[700]">Покупайте
+                                акционные товары</h1>
+                            <p class="white-space text-[12px] lg:text-[16px] font-[400]">И получайте вдвое больше
+                                бонусов</p>
                         </div>
                         <div class="max-w-[206px]">
                             <img class="w-full block" src="./assets/images/korzinka.png" alt="">
                         </div>
-                    
+
                     </div>
 
                 </div>
@@ -447,138 +522,195 @@
                 <h1 class="text-[24px] lg:text-[36px] font-[700] pb-[40px]">Наши магазины</h1>
 
                 <div class="md:flex gap-[24px] pb-[24px] white-space">
-                    <button class="mb-[5px] py-[8px] px-[16px] bg-[#F3F2F1] rounded-[4px] text-[#606060] hover:bg-[#70C05B] hover:text-[white] duration-300 cursor-pointer">п.Щельяюр</button>
-                    <button class="py-[8px] px-[16px] bg-[#F3F2F1] rounded-[4px] text-[#606060] hover:bg-[#70C05B] hover:text-[white] duration-300 cursor-pointer">д.Вертеп</button>
-                    <button class="py-[8px] px-[16px] bg-[#F3F2F1] rounded-[4px] text-[#606060] hover:bg-[#70C05B] hover:text-[white] duration-300 cursor-pointer">с.Краснобор</button>
-                    <button class="py-[8px] px-[16px] bg-[#F3F2F1] rounded-[4px] text-[#606060] hover:bg-[#70C05B] hover:text-[white] duration-300 cursor-pointer">д.Диюр</button>
+                    <button
+                        class="mb-[5px] py-[8px] px-[16px] bg-[#F3F2F1] rounded-[4px] text-[#606060] hover:bg-[#70C05B] hover:text-[white] duration-300 cursor-pointer">п.Щельяюр</button>
+                    <button
+                        class="py-[8px] px-[16px] bg-[#F3F2F1] rounded-[4px] text-[#606060] hover:bg-[#70C05B] hover:text-[white] duration-300 cursor-pointer">д.Вертеп</button>
+                    <button
+                        class="py-[8px] px-[16px] bg-[#F3F2F1] rounded-[4px] text-[#606060] hover:bg-[#70C05B] hover:text-[white] duration-300 cursor-pointer">с.Краснобор</button>
+                    <button
+                        class="py-[8px] px-[16px] bg-[#F3F2F1] rounded-[4px] text-[#606060] hover:bg-[#70C05B] hover:text-[white] duration-300 cursor-pointer">д.Диюр</button>
                 </div>
 
                 <div style="position:relative;overflow:hidden;width:100%;"><a
                         href="https://yandex.uz/maps/10335/tashkent/?utm_medium=mapframe&utm_source=maps"
                         style="color:#eee;font-size:12px;position:absolute;top:0px;">Ташкент</a><a
                         href="https://yandex.uz/maps/10335/tashkent/?ll=69.279737%2C41.311151&utm_medium=mapframe&utm_source=maps&z=12"
-                        style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты — транспорт, навигация, поиск
-                        мест</a><iframe class="w-full" src="https://yandex.uz/map-widget/v1/?ll=69.279737%2C41.311151&z=12" width="1200px" height="354px"
-                        frameborder="1" allowfullscreen="true" style="position:relative;border-radius: 4px;"></iframe></div>
+                        style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты — транспорт,
+                        навигация, поиск
+                        мест</a><iframe class="w-full"
+                        src="https://yandex.uz/map-widget/v1/?ll=69.279737%2C41.311151&z=12" width="1200px"
+                        height="354px" frameborder="1" allowfullscreen="true"
+                        style="position:relative;border-radius: 4px;"></iframe></div>
 
             </div>
         </section>
 
         <section class="bg-[#FBF8EC] px-[20px] pb-[120px]">
-             <div class="container mx-auto">
-                
+            <div class="container mx-auto">
+
                 <div class="flex items-center justify-between">
                     <h1 class="text-[24px] lg:text-[36px] font-[700] pb-[40px]">Статьи</h1>
                     <span class="flex place-items-center align-middle pb-[25px] gap-[10px]">
                         <p class="text-[#606060]">Все статьи</p><img src="./assets/images/arrow-right.svg" alt="">
                     </span>
-                    </div>
+                </div>
 
-                    <div class="md:flex justify-between gap-[20px]">
+                <div class="md:flex justify-between gap-[20px]">
 
-                        <div class="mb-[20px] relative w-full max-w-[576px] max-h-[420px] bg-[white] rounded-[4px] overflow-hidden duration-300 hover:shadow-orange-200 hover:shadow-xl">
-                            <img class="w-full" src="./assets/images/1-publishing.png" alt="publishing photo">
+                    <div
+                        class="mb-[20px] relative w-full max-w-[576px] max-h-[420px] bg-[white] rounded-[4px] overflow-hidden duration-300 hover:shadow-orange-200 hover:shadow-xl">
+                        <img class="w-full" src="./assets/images/1-publishing.png" alt="publishing photo">
 
-                            <div class="p-[10px] pb-[60px] ">
-                                <p class="text-[12px] text-[#606060]">05.03.2021</p>
-                                <h1 class="text-[16px] xl:text-[18px] font-[700] py-[10px]">Режим использования масок и перчаток на территории магазинов</h1>
-                                <p class="text-[14px] xl:text-[16px] text-[#414141] line-clamp-3">Подробная информация о режимах использования масок и перчаток на территории магазинов "ЛЕНТА". Информация обновляется
+                        <div class="p-[10px] pb-[60px] ">
+                            <p class="text-[12px] text-[#606060]">05.03.2021</p>
+                            <h1 class="text-[16px] xl:text-[18px] font-[700] py-[10px]">Режим использования масок и
+                                перчаток на территории магазинов</h1>
+                            <p class="text-[14px] xl:text-[16px] text-[#414141] line-clamp-3">Подробная информация о
+                                режимах использования масок и перчаток на территории магазинов "ЛЕНТА". Информация
+                                обновляется
                                 каждый будний день.</p>
-                                <a class="absolute bottom-[10px] block px-[32px] py-[8px] max-w-[150px] max-h-[40px] text-[#70C05B] rounded-[4px] bg-[#E5FFDE] hover:bg-[#70C05B] hover:text-[#E5FFDE] duration-300" href="">Подробнее</a>
-                            </div>
+                            <a class="absolute bottom-[10px] block px-[32px] py-[8px] max-w-[150px] max-h-[40px] text-[#70C05B] rounded-[4px] bg-[#E5FFDE] hover:bg-[#70C05B] hover:text-[#E5FFDE] duration-300"
+                                href="">Подробнее</a>
                         </div>
-                        
-                        <div class="mb-[20px] relative w-full max-w-[576px] max-h-[420px] bg-[white] rounded-[4px] overflow-hidden duration-300 hover:shadow-orange-200 hover:shadow-xl">
-                            <img class="w-full" src="./assets/images/2-publishing.png" alt="publishing photo">
-                        
-                            <div class="p-[10px] pb-[60px]">
-                                <p class="text-[12px] text-[#606060]">06.03.2021</p>
-                                <h1 class="text-[16px] xl:text-[18px] font-[700] py-[10px]">Весеннее настроение для каждой</h1>
-                                <p class="text-[14px] xl:text-[16px] text-[#414141] line-clamp-3">8 Марта – это не просто Международный женский день, это ещё день тюльпанов, приятных сюрпризов и праздничных тёплых
-                                пожеланий.</p>
-                                <a class="absolute bottom-[10px]  block px-[32px] py-[8px] max-w-[150px] max-h-[40px] text-[#70C05B] rounded-[4px] bg-[#E5FFDE] hover:bg-[#70C05B] hover:text-[#E5FFDE] duration-300"
-                                    href="">Подробнее</a>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-[20px] relative w-full max-w-[576px] max-h-[420px] bg-[white] rounded-[4px] overflow-hidden duration-300 hover:shadow-orange-200 hover:shadow-xl">
-                            <img class="w-full" src="./assets/images/3-publishing.png" alt="publishing photo">
-                        
-                            <div class="p-[10px] pb-[60px]">
-                                <p class="text-[12px] text-[#606060]">22.02.2020</p>
-                                <h1 class="text-[16px] xl:text-[18px] font-[700] py-[10px]">ЗОЖ или ФАСТФУД. А вы на чьей стороне? Голосуем!</h1>
-                                <p class="text-[14px] xl:text-[16px] text-[#414141] line-clamp-3">Голосуйте за любимые категории, выбирайте категорию-победителя в мобильном приложении и получайте кешбэк 10% баллами в
-                                апреле!</p>
-                                <a class="absolute bottom-[10px] block px-[32px] py-[8px] max-w-[150px] max-h-[40px] text-[#70C05B] rounded-[4px] bg-[#E5FFDE] hover:bg-[#70C05B] hover:text-[#E5FFDE] duration-300"
-                                    href="">Подробнее</a>
-                            </div>
-                        </div>
-
                     </div>
 
-             </div>
+                    <div
+                        class="mb-[20px] relative w-full max-w-[576px] max-h-[420px] bg-[white] rounded-[4px] overflow-hidden duration-300 hover:shadow-orange-200 hover:shadow-xl">
+                        <img class="w-full" src="./assets/images/2-publishing.png" alt="publishing photo">
+
+                        <div class="p-[10px] pb-[60px]">
+                            <p class="text-[12px] text-[#606060]">06.03.2021</p>
+                            <h1 class="text-[16px] xl:text-[18px] font-[700] py-[10px]">Весеннее настроение для каждой
+                            </h1>
+                            <p class="text-[14px] xl:text-[16px] text-[#414141] line-clamp-3">8 Марта – это не просто
+                                Международный женский день, это ещё день тюльпанов, приятных сюрпризов и праздничных
+                                тёплых
+                                пожеланий.</p>
+                            <a class="absolute bottom-[10px]  block px-[32px] py-[8px] max-w-[150px] max-h-[40px] text-[#70C05B] rounded-[4px] bg-[#E5FFDE] hover:bg-[#70C05B] hover:text-[#E5FFDE] duration-300"
+                                href="">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="mb-[20px] relative w-full max-w-[576px] max-h-[420px] bg-[white] rounded-[4px] overflow-hidden duration-300 hover:shadow-orange-200 hover:shadow-xl">
+                        <img class="w-full" src="./assets/images/3-publishing.png" alt="publishing photo">
+
+                        <div class="p-[10px] pb-[60px]">
+                            <p class="text-[12px] text-[#606060]">22.02.2020</p>
+                            <h1 class="text-[16px] xl:text-[18px] font-[700] py-[10px]">ЗОЖ или ФАСТФУД. А вы на чьей
+                                стороне? Голосуем!</h1>
+                            <p class="text-[14px] xl:text-[16px] text-[#414141] line-clamp-3">Голосуйте за любимые
+                                категории, выбирайте категорию-победителя в мобильном приложении и получайте кешбэк 10%
+                                баллами в
+                                апреле!</p>
+                            <a class="absolute bottom-[10px] block px-[32px] py-[8px] max-w-[150px] max-h-[40px] text-[#70C05B] rounded-[4px] bg-[#E5FFDE] hover:bg-[#70C05B] hover:text-[#E5FFDE] duration-300"
+                                href="">Подробнее</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
         </section>
 
-        
 
 
-    <footer class=" pt-[24px] pb-[88px] bg-[#FBe8c9] px-[20px]">
-        <div class="container mx-auto flex justify-between ">
-            
-            <div class="flex flex-col md:flex-row items-center gap-[20px] block">
-                <div class="flex justify-self-start"><a href=""><img src="./assets/images/logo.svg" alt=""></a></div>
-                
-                <div class="flex gap-[20px] flex-wrap">
-                  <a class="text-[12px] flex white-space" href="./pages/about_us.html">О компании</a>
-                <a class="text-[12px]" href="./pages/contacts.html">Контакты</a>
-                <a class="text-[12px]" href="./pages/vacancies.html">Вакансии</a>
-                <a class="text-[12px]" href="">Статьи</a>
-                <a class="text-[12px]" href="">Политика обработки персональных данных</a>  
+
+        <footer class=" pt-[24px] pb-[88px] bg-[#FBe8c9] px-[20px]">
+            <div class="container mx-auto flex justify-between ">
+
+                <div class="flex flex-col md:flex-row items-center gap-[20px] block">
+                    <div class="flex justify-self-start"><a href=""><img src="./assets/images/logo.svg" alt=""></a>
+                    </div>
+
+                    <div class="flex gap-[20px] flex-wrap">
+                        <a class="text-[12px] flex white-space" href="./pages/about_us.html">О компании</a>
+                        <a class="text-[12px]" href="./pages/contacts.html">Контакты</a>
+                        <a class="text-[12px]" href="./pages/vacancies.html">Вакансии</a>
+                        <a class="text-[12px]" href="">Статьи</a>
+                        <a class="text-[12px]" href="">Политика обработки персональных данных</a>
+                    </div>
+
                 </div>
-                
-            </div>
 
-            <div class="flex flex-col md:flex-row items-center gap-[16px]">
-                <div class="flex md:grid md:grid-cols-2 gap-[20px] lg:flex">
-                  <a href=""><img class="max-w-[24px]" src="./assets/images/instagram.svg" alt=""></a>
-                <a href=""><img class="max-w-[24px]" src="./assets/images/vkontakte.svg" alt=""></a>
-                <a href=""><img class="max-w-[24px]" src="./assets/images/facebook.svg" alt=""></a>
-                <a href=""><img class="max-w-[24px]" src="./assets/images/ok.svg" alt=""></a>   
+                <div class="flex flex-col md:flex-row items-center gap-[16px]">
+                    <div class="flex md:grid md:grid-cols-2 gap-[20px] lg:flex">
+                        <a href=""><img class="max-w-[24px]" src="./assets/images/instagram.svg" alt=""></a>
+                        <a href=""><img class="max-w-[24px]" src="./assets/images/vkontakte.svg" alt=""></a>
+                        <a href=""><img class="max-w-[24px]" src="./assets/images/facebook.svg" alt=""></a>
+                        <a href=""><img class="max-w-[24px]" src="./assets/images/ok.svg" alt=""></a>
+                    </div>
+
+                    <div class="flex items-center pl-[24px] gap-[8px] whitespace-nowrap"><img
+                            src="./assets/images/phone.svg" alt=""><a href="">
+                            <p>8 800 777 33 33</p>
+                        </a></div>
                 </div>
-                
-                <div class="flex items-center pl-[24px] gap-[8px] whitespace-nowrap"><img src="./assets/images/phone.svg" alt=""><a href=""><p>8 800 777 33 33</p></a></div>
+
+
             </div>
+        </footer>
 
-            
-        </div>
-    </footer>
-
-<section class=" sm:hidden py-[5px] px-[20px] bg-[white] border-t-[3px] border-[#E8E2C8] fixed w-full bottom-[0] z-[2]">
+        <section
+            class=" sm:hidden py-[5px] px-[20px] bg-[white] border-t-[3px] border-[#E8E2C8] fixed w-full bottom-[0] z-[2]">
             <div class="container mx-auto">
-        <ul class="flex gap-[5px] sm:hidden items-center justify-between">
-            <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center text-[14px]" href="./pages/catalog.html"><img src="./assets/images/Frame 211.svg" alt="">Каталог</a></li>
-            <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center text-[14px]" href="./pages/favourites.html"><img src="./assets/images/favourites.svg" alt="">Избранное</a></li>
-            <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center text-[14px]" href="./pages/basket.html"><img src="./assets/images/shop.svg" alt="">Корзина</a></li>
-            <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center text-[14px]" href="./pages/all_products.html"><img src="./assets/images/products.svg" alt="">Продукты</a></li>
-            <li class="place-items-center pt-[5px]"><img class="w-[40px] h-[40px]" src="./assets/images/avatar.png" alt="">
-            <h1 class="pr-[15px] hidden lg:flex">Алексей</h1>
-            </li>
-        </ul>
-    </div>
-</section>
+                <ul class="flex gap-[5px] sm:hidden items-center justify-between">
+                    <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center text-[14px]"
+                            href="./pages/catalog.html"><img src="./assets/images/Frame 211.svg" alt="">Каталог</a></li>
+                    <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center text-[14px]"
+                            href="./pages/favourites.html"><img src="./assets/images/favourites.svg"
+                                alt="">Избранное</a></li>
+                    <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center text-[14px]"
+                            href="./pages/basket.html"><img src="./assets/images/shop.svg" alt="">Корзина</a></li>
+                    <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center text-[14px]"
+                            href="./pages/all_products.html"><img src="./assets/images/products.svg" alt="">Продукты</a>
+                    </li>
+                    <li class="place-items-center pt-[5px]"><img class="w-[40px] h-[40px]"
+                            src="./assets/images/avatar.png" alt="">
+                        <h1 class="pr-[15px] hidden lg:flex">Алексей</h1>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
 
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
-        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
         <script src="./js/products-data/products-data.js"></script>
-        <script src="./js/cart.js"></script>
-        <script src="./js/products.js"></script> 
+        <script src="./js/products.js"></script>
         <script src="./js/search.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+            integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+            integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                pagination: {
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 50,
+                    },
+                },
+            });
+        </script>
         <script src="./js/main.js"></script>
+
 </body>
+
 </html>

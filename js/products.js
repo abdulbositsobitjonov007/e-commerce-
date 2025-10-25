@@ -151,13 +151,13 @@ function getDiscountProducts(content, data) {
             }
 
                                 ${(isExist = cart.find((car) => car.id === el.id))
-                ? `<div  class= "flex w-full h-[40px] rounded-[4px] border-[1px] border-[#70C05B]">
+            ? `<div  class= "flex w-full h-[40px] rounded-[4px] border-[1px] border-[#70C05B]">
                                        <button onClick="decrease(${el.id})" class="cursor-pointer flex items-center justify-center bg-[#70C05B]  w-full text-[28px] text-[white]">-</button>
                                        <span id="qty" class="cursor-pointer flex items-center justify-center bg-[white]  w-full text-[28px]">${(cart.find((item) => item.id === el.id)).qty}</span>  
                                        <button onClick="increase(${el.id})" class="cursor-pointer flex items-center justify-center bg-[#70C05B]  w-full text-[28px] text-[white]">+</button>
                                     </div>`
-                :
-                `<button onClick="addtoCart(${el.id})" 
+            :
+            `<button onClick="addtoCart(${el.id})" 
                                     class="cursor-pointer w-[258px] w-full h-[40px] rounded-[4px] border-[1px] border-[#70C05B] text-[#70C05B] text-[16px] font-[400] font-rubik hover:bg-[#FF6633] hover:border-[#FF6633] hover:text-[white] duration-300">В
                                     корзину</button>`
 

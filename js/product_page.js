@@ -146,7 +146,7 @@ idProduct.map((el) => {
 
                 <div class="flex flex-col gap-[30px] md:grid grid-cols-2 pt-[26px] w-full">
                     <div class="flex items-center gap-[16px]">
-                        <div class="flex flex-col gap-[7px]">
+                        <div id="small-images" class="flex h-full flex-col gap-[7px]">
                         ${
                            el.images.map((el) => {
                                return `<img class="max-w-[60px] sm:max-w-[250px] md:max-w-[80px] lg:max-w-[140px] h-full max-h-[60px] md:max-h-[100px] lg:max-h-[140px] object-cover overflow-hidden" src="${el}" alt="">`
@@ -156,7 +156,7 @@ idProduct.map((el) => {
                             
                         </div>
                         <div class="h-full w-full relative">
-                        <img class="w-full h-full object-cover" src="${el.images[0]}" alt="">
+                        <img id="main-image" class=" h-full object-cover" src="${el.images[0]}" alt="">
                         <p class="text-[white] text-[18px] absolute top-[20px] right-[20px] px-[15px] py-[7px] bg-[#FF6633] rounded-[4px]">-${el.discount}%</p>
                         </div>
                     </div>
@@ -205,7 +205,12 @@ idProduct.map((el) => {
     `
 });
 
+let smallImages = document.getElementById("small-images");
+let mainImage = document.getElementById("main-image");
 
+smallImages.addEventListener("click", function(e){
+e.target.src && (mainImage.src = e.target.src);
+})
 
 discountFourSliceproducts.map((el) => {
     discountcards.innerHTML +=

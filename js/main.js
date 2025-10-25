@@ -15,7 +15,7 @@ $(".owl-carousel").owlCarousel({
         0: {
             items: 2,
         },
-        600: {
+        768: {
             items: 3,
         },
         1000: {
@@ -38,4 +38,5 @@ toggleBtn.addEventListener("click", function(){
     loadingScreen.classList.add("hidden")
  })
  
- 
+   
+            

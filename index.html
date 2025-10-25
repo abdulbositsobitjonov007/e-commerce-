@@ -15,42 +15,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <style>
-        html,
-        body {
-            position: relative;
-            height: 100%;
-        }
-
-        body {
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            margin: 0;
-            padding: 0;
-        }
-
-        .swiper {
-            width: 100%;
-            height: 100%;
-        }
-
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #444;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .swiper-slide img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
+    
+    
 
 </head>
 
@@ -101,9 +67,9 @@
                             class="absolute top-[-10px] right-[7px] bg-[red] rounded-full px-[5px] text-[white] text-[12px]"></span></a>
                 </li>
             </ul>
-            <div class="hidden sm:flex items-center gap-[10px]">
-                <img class="w-[40px] h-[40px]" src="./assets/images/avatar.png" alt="">
-                <h1 class="pr-[15px] hidden lg:flex">Алексей</h1>
+            <div id="profile" class="cursor-pointer hidden sm:flex items-center gap-[10px]">
+                <img id="profile-img" class="w-[40px] h-[40px]" src="./assets/images/avatar.png" alt="">
+                <h1 id="profile-name" class="pr-[15px] hidden lg:flex">Алексей</h1>
                 <img src="./assets/images/arrow down.svg" alt="">
             </div>
 
@@ -112,21 +78,9 @@
 
     <div id="res-menu"
         class="all-categories hidden duration-600 bg-[white] sm:flex translate-y-[-100%] fixed w-full top-[0] z-[2] pt-[65px] border-b-[3px] border-[#E8E2C8]">
-        <ul
+        <ul id="categories"
             class=" px-[20px] sm:grid py-[20px] md:py-[30px] container mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px] md:gap-[20px] lg:gap-[30px]">
-            <li><a class="font-bold" href="">Молоко, сыр, яйцо</a></li>
-            <li><a class="font-bold" href="">Хлеб</a></li>
-            <li><a class="font-bold" href="">Фрукты и овощи</a></li>
-            <li><a class="font-bold" href="">Замороженные продукты</a></li>
-            <li><a class="font-bold" href="">Напитки</a></li>
-            <li><a class="font-bold" href="">Кондитерские изделия</a></li>
-            <li><a class="font-bold" href="">Чай, кофе</a></li>
-            <li><a class="font-bold" href="">Бакалея</a></li>
-            <li><a class="font-bold" href="">Здоровое питание</a></li>
-            <li><a class="font-bold" href="">Зоотовары</a></li>
-            <li><a class="font-bold" href="">Непродовольственные товары</a></li>
-            <li><a class="font-bold" href="">Детское питание</a></li>
-            <li><a class="font-bold" href="">Мясо, птица, колбаса</a></li>
+            
         </ul>
     </div>
 
@@ -158,10 +112,8 @@
 
 
 
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper dis-cards">
-
-                    </div>
+                <div class="dis-cards gap-[20px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                    
                 </div>
             </div>
 
@@ -652,6 +604,19 @@
             </div>
         </footer>
 
+        <div id="modal" class="hidden fixed z-[5] top-0 left-0 w-full h-full flex items-center justify-center bg-[#FCD5BACD]">  
+            <div id="inner-modal" class="container max-w-[450px] h-[500px] bg-[white] gap-[40px] flex flex-col items-center justify-center">
+                <h1 class="text-[24px] font-bold">Вход</h1>
+                <form id="form-modal" class="flex flex-col items-center gap-[30px] w-full">
+                    <input required class="max-w-[300px] h-[50px] border-[2px] border-[#07d57b] rounded-[5px] w-full px-[15px] " type="text" placeholder="photo">
+                    <input required class="max-w-[300px] h-[50px] border-[2px] border-[#07d57b] rounded-[5px] w-full px-[15px] " type="text" placeholder="Введите имя">
+                    <input id="profile-tel" required class="max-w-[300px] h-[50px] border-[2px] border-[#07d57b] rounded-[5px] w-full px-[15px] " type="tel" placeholder="Номер телефона">
+                    <input id="profile-password" required class="max-w-[300px] h-[50px] border-[2px] border-[#07d57b] rounded-[5px] w-full px-[15px] " type="password" placeholder="Пароль">
+                    <button type="submit" class="max-w-[300px] h-[50px] font-bold text-[24px] text-[orangered] bg-orange-200 rounded-[5px] w-full px-[15px] cursor-pointer hover:bg-[#FF6633] hover:text-[white] duration-300">Вход</button>
+                </form>
+                </div>
+        </div>
+
         <section
             class=" sm:hidden py-[5px] px-[20px] bg-[white] border-t-[3px] border-[#E8E2C8] fixed w-full bottom-[0] z-[2]">
             <div class="container mx-auto">
@@ -666,18 +631,18 @@
                     <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center text-[14px]"
                             href="./pages/all_products.html"><img src="./assets/images/products.svg" alt="">Продукты</a>
                     </li>
-                    <li class="place-items-center pt-[5px]"><img class="w-[40px] h-[40px]"
+                    <li id="profile" class="place-items-center pt-[5px]"><img id="profile-img" class="w-[40px] h-[40px]"
                             src="./assets/images/avatar.png" alt="">
-                        <h1 class="pr-[15px] hidden lg:flex">Алексей</h1>
+                        <h1 id="profile-name" class="pr-[15px] hidden lg:flex">Алексей</h1>
                     </li>
                 </ul>
             </div>
         </section>
 
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+        <script src="./js/profile.js"></script>
         <script src="./js/products-data/products-data.js"></script>
+        <script src="./js/categories-data.js"></script>
         <script src="./js/products.js"></script>
         <script src="./js/search.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
@@ -686,29 +651,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
             integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script>
-            var swiper = new Swiper(".mySwiper", {
-                slidesPerView: 1,
-                spaceBetween: 10,
-                pagination: {
-                    clickable: true,
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 3,
-                        spaceBetween: 40,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 50,
-                    },
-                },
-            });
-        </script>
+        <script src="./js/category.js"></script>
         <script src="./js/main.js"></script>
 
 </body>

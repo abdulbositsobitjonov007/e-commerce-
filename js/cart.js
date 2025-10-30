@@ -34,8 +34,8 @@ function getDiscountProducts(content, data) {
             `
     <div class="flex flex-col sm:flex sm:flex-row gap-[10px] h-full w-full mt-[30px] max-w-[1300px] h-[82px] bg-[white] justify-between rounded-[5px] shadow-md hover:shadow-orange-300 duration-400">
                     <div class="flex items-center gap-[10px]">
-                        <div class="relative">
-                            <img class="object-cover overflow-hidden rounded-[4px] max-w-[100px] w-full h-[70px]" src="${el.images[0]}" alt="">
+                        <div class="relative w-[130px] overflow-hidden">
+                            <img class="object-cover overflow-hidden rounded-[4px] w-full h-[70px]" src="${el.images[0]}" alt="">
                             <div class="absolute top-[0] w-full">
                                 <input onClick = "addToCheck(this , ${el.id})" class="checks w-[20px] h-[20px]"  type="checkbox">
                             </div>

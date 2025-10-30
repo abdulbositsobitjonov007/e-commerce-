@@ -8,7 +8,7 @@ let profileName = document.getElementById("profile-name");
 function showProfileInfo(){
     let info = JSON.parse(localStorage.getItem("infos") || "{}")
 
-profileImage.src = info.photo;
+profileImage.src = info.imageUrl;
 profileName.textContent = info.name;
 }
 
@@ -33,7 +33,7 @@ innerProfileModal.addEventListener("click", function(e){
 formModal.addEventListener("submit", function(e){
 e.preventDefault;
 let infos = {};
-infos.imageURL = e.target[0].value;
+infos.imageUrl = e.target[0].value;
 infos.name = e.target[1].value;
 infos.number = e.target[2].value;
 infos.password = e.target[3].value;

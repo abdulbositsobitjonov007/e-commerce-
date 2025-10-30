@@ -8,6 +8,10 @@
 </head>
 <body>
 
+    <div id="loading" class="fixed w-full h-full z-[4] duration-600">
+        <img class="w-full h-full" src="../assets/images/Dual Ball@1x-1.0s-203px-203px.svg" alt="loading">
+    </div>
+
     <header class="py-[11px] px-[20px] bg-[white] border-b-[3px] border-[#E8E2C8] fixed w-full top-[0] z-[3]">
         <div class="container mx-auto flex justify-between items-center gap-[16px]">
             <a class="flex gap-[11px]" href="../index.html"><img class="max-w-[39px] w-full h-[32px]" src="../assets/images/logo1.svg"
@@ -50,24 +54,12 @@
     </header>
 
     <div id="res-menu"
-        class="hidden duration-600 bg-[white] sm:flex translate-y-[-100%] fixed w-full top-[0] z-[2] pt-[65px] border-b-[3px] border-[#E8E2C8]">
-        <ul
+        class="all-categories hidden duration-600 bg-[white] sm:flex translate-y-[-100%] fixed w-full top-[0] z-[2] pt-[65px] border-b-[3px] border-[#E8E2C8]">
+        <ul id="categories"
             class=" px-[20px] sm:grid py-[20px] md:py-[30px] container mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px] md:gap-[20px] lg:gap-[30px]">
-            <li><a class="font-bold" href="">Молоко, сыр, яйцо</a></li>
-            <li><a class="font-bold" href="">Хлеб</a></li>
-            <li><a class="font-bold" href="">Фрукты и овощи</a></li>
-            <li><a class="font-bold" href="">Замороженные продукты</a></li>
-            <li><a class="font-bold" href="">Напитки</a></li>
-            <li><a class="font-bold" href="">Кондитерские изделия</a></li>
-            <li><a class="font-bold" href="">Чай, кофе</a></li>
-            <li><a class="font-bold" href="">Бакалея</a></li>
-            <li><a class="font-bold" href="">Здоровое питание</a></li>
-            <li><a class="font-bold" href="">Зоотовары</a></li>
-            <li><a class="font-bold" href="">Непродовольственные товары</a></li>
-            <li><a class="font-bold" href="">Детское питание</a></li>
-            <li><a class="font-bold" href="">Мясо, птица, колбаса</a></li>
+    
         </ul>
-        </div>
+    </div>
 
     <main>
         <section class="bg-[#FBF8EC] px-[20px] pt-[94px] pb-[120px]">
@@ -75,121 +67,7 @@
                 <div class="flex items-center gap-[16px]"><a class="text-[12px] font-[400]" href="../index.html">Главная</a><img src="../assets/images/chevron-right.svg" alt=""><a class="text-[12px] font-[400]">Каталог</a></div>
                 <h1 class="text-[46px] lg:text-[64px] font-[700] pt-[30px] pb-[40px]">Каталог</h1>
 
-                <div class="flex flex-col gap-[40px]">
-
-                <div class="flex gap-[40px]">
-                    <div class="relative cursor-pointer"><a href="../pages/categories.html">
-                        <img src="../assets/images/milk-cheese-egg.png" alt="">
-                        <div class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
-                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Молоко, сыр, яйцо</p>
-                        </div></a>
-                    </div>
-                    <div class="relative cursor-pointer">
-                        <a href="../pages/categories.html">
-                        <img src="../assets/images/bread.png" alt="">
-                        <div
-                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
-                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Хлеб</p>
-                        </div></a>
-                    </div>
-                    <div class="relative cursor-pointer">
-                        <a href="../pages/categories.html">
-                        <img src="../assets/images/fruits-vegetables.png" alt="">
-                        <div
-                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
-                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Фрукты и овощи</p>
-                        </div></a>
-                    </div>
-                </div>
-
-                <div class="flex gap-[40px]">
-                    <div class="relative cursor-pointer">
-                        <a href="../pages/categories.html">
-                        <img src="../assets/images/frozen-products.png" alt="">
-                        <div
-                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
-                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Замороженные продукты</p>
-                        </div></a>
-                    </div>
-                    <div class="relative cursor-pointer">
-                        <a href="../pages/categories.html">
-                        <img src="../assets/images/bevereges.png" alt="">
-                        <div
-                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
-                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Напитки</p>
-                        </div></a>
-                    </div>
-                    <div class="relative cursor-pointer">
-                        <a href="../pages/categories.html">
-                        <img src="../assets/images/candies.png" alt="">
-                        <div
-                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
-                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Кондитерские изделия</p>
-                        </div></a>
-                    </div>
-                    <div class="relative cursor-pointer">
-                        <a href="../pages/categories.html">
-                        <img src="../assets/images/tea-coffee.png" alt="">
-                        <div
-                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
-                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Чай, кофе</p>
-                        </div></a>
-                    </div>
-                </div>
-                
-                <div class="flex gap-[40px]">
-                    <div class="relative cursor-pointer">
-                        <a href="../pages/categories.html">
-                        <img src="../assets/images/floured-products.png" alt="">
-                        <div
-                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
-                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Бакалея</p>
-                        </div></a>
-                    </div>
-                    <div class="relative cursor-pointer">
-                        <a href="../pages/categories.html">
-                        <img src="../assets/images/healthy-consumption.png" alt="">
-                        <div
-                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
-                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Здоровое питание</p>
-                        </div></a>
-                    </div>
-                    <div class="relative cursor-pointer">
-                        <a href="../pages/categories.html">
-                        <img src="../assets/images/zoo-products.png" alt="">
-                        <div
-                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
-                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Зоотовары</p>
-                        </div></a>
-                    </div>
-                </div>
-
-                <div class="flex gap-[40px]">
-                    <div class="relative cursor-pointer">
-                        <a href="../pages/categories.html">
-                        <img src="../assets/images/children-products.png" alt="">
-                        <div
-                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
-                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Детское питание</p>
-                        </div></a>
-                    </div>
-                    <div class="relative cursor-pointer">
-                        <a href="../pages/categories.html">
-                        <img src="../assets/images/meat-bird-sausage.png" alt="">
-                        <div
-                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
-                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Мясо, птица, колбаса</p>
-                        </div></a>
-                    </div>
-                    <div class="relative cursor-pointer">
-                        <a href="../pages/categories.html">
-                        <img src="../assets/images/house-products.png" alt="">
-                        <div
-                            class="absolute bottom-0 bg-gradient-to-t from-[#70C05B] w-full h-[70%] hover:from-[#FF6633] hover:h-full duration-300">
-                            <p class="absolute bottom-[10px] left-[10px] text-[18px] font-[700] text-[white] ">Непродовольственные товары</p>
-                        </div></a>
-                    </div>
-                </div>
+                <div id="catalog" class=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-[30px]">
 
                 </div>
                 
@@ -233,7 +111,10 @@
     </footer>
      
     <script src="../js/products-data/products-data.js"></script>
+    <script src="../js/categories-data.js"></script>
     <script src="../js/search.js"></script>
+    <script src="../js/categories-page.js"></script>
     <script src="../js/catalog_toggle.js"></script>
+    <script src="../js/category-others.js"></script>
 </body>
 </html>

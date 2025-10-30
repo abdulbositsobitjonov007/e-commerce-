@@ -2,11 +2,17 @@ let path = new URLSearchParams(window.location.search);
 
 let name = path.get("name");
 
-let categoryCards = document.getElementById("category-cards")
+let categoryCards = document.getElementById("category-cards");
+
+let categoriesName = document.getElementById("categories-name");
+
 
 let filteredCategoryProducts = products.filter((el) => el.category === name);
+categoriesName.textContent = name;
 
 let otherCart = JSON.parse(localStorage.getItem("cart") || "[]");
+
+localStorage.setItem("cart", JSON.stringify(otherCart));
 
 
 function categoryProducts(content, data) {
@@ -16,13 +22,16 @@ function categoryProducts(content, data) {
             `
                        <div
                             class=" overflow-hidden w-full max-w-[572px] bg-[white] rounded-[4px] shadow-md hover:shadow-orange-300 hover:shadow-xl duration-300">
-                            <a href="../pages/product.html?id=${el.id}" class="relative overflow-hidden w-full h-[160px] ">
-                                <img class="w-full" style="max-width:100%; height:auto;"
+                            <a href="../pages/product.html?id=${el.id}">
+                            <div class="relative h-[190px] w-full overflow-hidden ">
+                            <img class="w-full object-cover" style=" height:auto;"
                                     src="${el.images[0]}" alt="${el.name}">
+                                
                                 <p class="text-[white] absolute left-[10px] bottom-[10px] px-[8px] py-[4px] bg-[#FF6633] rounded-[4px]">-${el.discount}%</p>
                                 <img style="width: 29px; height: 28px;"
                                     class="absolute top-[12px] right-[12px] p-[4px] rounded-[4px] bg-[#F3F2F1] opacity-[50%] cursor-pointer"
                                     src="../assets/images/heart.svg" alt="">
+                                    </div>
                             </a>
     
                             <div class="p-[8px] w-full h-full">
@@ -146,9 +155,9 @@ function categoryProducts(content, data) {
 
                                 ${(isExist = otherCart.find((car) => car.id === el.id))
                 ? `<div  class= "flex w-full h-[40px] rounded-[4px] border-[1px] border-[#70C05B]">
-                                       <button onClick="decrease(${el.id})" class="cursor-pointer flex items-center justify-center bg-[#70C05B]  w-full text-[28px] text-[white]">-</button>
-                                       <span id="qty" class="cursor-pointer flex items-center justify-center bg-[white]  w-full text-[28px]">${(cart.find((item) => item.id === el.id)).qty}</span>  
-                                       <button onClick="increase(${el.id})" class="cursor-pointer flex items-center justify-center bg-[#70C05B]  w-full text-[28px] text-[white]">+</button>
+                                       <button onClick="decreaseBtn(${el.id})" class="cursor-pointer flex items-center justify-center bg-[#70C05B]  w-full text-[28px] text-[white]">-</button>
+                                       <span id="qty" class="cursor-pointer flex items-center justify-center bg-[white]  w-full text-[28px]">${(otherCart.find((item) => item.id === el.id)).qty}</span>  
+                                       <button onClick="increaseBtn(${el.id})" class="cursor-pointer flex items-center justify-center bg-[#70C05B]  w-full text-[28px] text-[white]">+</button>
                                     </div>`
                 :
                 `<button onClick="addtoCart(${el.id})" 
@@ -165,6 +174,16 @@ function categoryProducts(content, data) {
 
 categoryProducts(categoryCards, filteredCategoryProducts);
 
+function addtoCart(id) {
+    let item = products.find((el) => el.id === id);
+    item.qty = 1;
+    otherCart.push(item);
+    localStorage.setItem("cart", JSON.stringify(otherCart));
+    badge.textContent = otherCart.length;
+    categoryProducts(categoryCards, filteredCategoryProducts);
+
+}
+
 function addToCheck(value, id) {
     if (value.checked === true) {
         ids.push(id);
@@ -177,7 +196,7 @@ function increaseBtn(id) {
     let item = otherCart.find((el) => el.id === id)
     item.qty += 1;
     localStorage.setItem("cart", JSON.stringify(otherCart));
-    categoryProducts(cartCards, otherCart)
+    categoryProducts(categoryCards, filteredCategoryProducts);
 }
 
 function decreaseBtn(id) {
@@ -189,7 +208,7 @@ function decreaseBtn(id) {
         badge.textContent = otherCart.length;
         localStorage.setItem("cart", JSON.stringify(otherCart));
     }
-    categoryProducts(cartCards, otherCart)
+    categoryProducts(categoryCards, filteredCategoryProducts);
 }
 
 

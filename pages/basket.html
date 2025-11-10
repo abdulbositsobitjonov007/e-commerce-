@@ -6,13 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -28,10 +22,10 @@
                 <p class="hidden sm:flex">СЕВЕРЯНОЧКА</p>
             </a>
             <button id="toggle-btn"
-                class="hidden sm:flex gap-[15px] bg-[#70C05B] max-w-[40px] 2xl:max-w-[140px] xl:max-w-[140px] md:max-w-[140px] lg:max-w-[40px] w-full h-[40px] cursor-pointer items-center p-[8px] text-[white] rounded-[8px]"><a
-                    class="flex gap-[15px]"><img src="../assets/images/menu.svg" alt="">
-                    <p class="hidden md:flex lg:hidden xl:flex">Каталог</p>
-                </a>
+                class="hidden sm:flex gap-[15px] bg-[#70C05B] max-w-[40px] 2xl:max-w-[140px] xl:max-w-[140px] md:max-w-[140px] lg:max-w-[40px] w-full h-[40px] cursor-pointer items-center p-[8px] text-[white] rounded-[8px]"><div
+                    class="flex gap-[15px]"><img src="../assets/images/menu.svg" alt=""></div>
+                    <a href="../pages/catalog.html"><p class="hidden md:flex lg:hidden xl:flex">Каталог</p></a>
+                
             </button>
             <form>
                 <div class="flex relative">
@@ -69,22 +63,10 @@
     </header>
 
     <div id="res-menu"
-        class="hidden duration-600 bg-[white] sm:flex translate-y-[-100%] fixed w-full top-[0] z-[2] pt-[65px] border-b-[3px] border-[#E8E2C8]">
-        <ul
+        class="all-categories hidden duration-600 bg-[white] sm:flex translate-y-[-100%] fixed w-full top-[0] z-[2] pt-[65px] border-b-[3px] border-[#E8E2C8]">
+        <ul id="categories"
             class=" px-[20px] sm:grid py-[20px] md:py-[30px] container mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px] md:gap-[20px] lg:gap-[30px]">
-            <li><a class="font-bold" href="">Молоко, сыр, яйцо</a></li>
-            <li><a class="font-bold" href="">Хлеб</a></li>
-            <li><a class="font-bold" href="">Фрукты и овощи</a></li>
-            <li><a class="font-bold" href="">Замороженные продукты</a></li>
-            <li><a class="font-bold" href="">Напитки</a></li>
-            <li><a class="font-bold" href="">Кондитерские изделия</a></li>
-            <li><a class="font-bold" href="">Чай, кофе</a></li>
-            <li><a class="font-bold" href="">Бакалея</a></li>
-            <li><a class="font-bold" href="">Здоровое питание</a></li>
-            <li><a class="font-bold" href="">Зоотовары</a></li>
-            <li><a class="font-bold" href="">Непродовольственные товары</a></li>
-            <li><a class="font-bold" href="">Детское питание</a></li>
-            <li><a class="font-bold" href="">Мясо, птица, колбаса</a></li>
+
         </ul>
     </div>
 
@@ -213,7 +195,8 @@
                             </div>
                             <p
                                 class="flex items-center whitespace-nowrap gap-[10px] text-[12px] text-[#70C05B] justify-center">
-                                <img src="../assets/images/smile.svg" alt="">Вы получяете 100 бонусов</p>
+                                <img src="../assets/images/smile.svg" alt="">Вы получяете 100 бонусов
+                            </p>
                             <p
                                 class="text-[12px] md:text-[10px] lg:text-[12px] rounded-[4px] text-[white] bg-[red] py-[4px] px-[8px] whitespace-nowrap text-center">
                                 Минимальная сумма заказа 1000р</p>
@@ -288,13 +271,9 @@
 
     <script src="../js/products-data/products-data.js"></script>
     <script src="../js/search-others.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
-        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/categories-data.js"></script>
+    <script src="../js/categories-page.js"></script>
+    <script src="../js/category-others.js"></script>
     <script src="../js/products.js"></script>
     <script src="../js/cart.js"></script>
     <script src="../js/catalog_toggle.js"></script>

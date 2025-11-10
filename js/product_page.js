@@ -175,7 +175,7 @@ idProduct.map((el) => {
                 </div>
                 </div>
                 <div class="flex justify-center">
-                     <button class="flex items-center w-full max-w-[300px] p-[10px] lg:p-[16px] bg-[#FF6633] gap-[48px] text-[16px] lg:text-[24px] text-[white] cursor-pointer rounded-[4px]"><img src="../assets/images/shopping-cart.svg" alt="">В корзину</button>
+                     <a href="../pages/basket.html" class="flex items-center w-full max-w-[300px] p-[10px] lg:p-[16px] bg-[#FF6633] gap-[48px] text-[16px] lg:text-[24px] text-[white] cursor-pointer rounded-[4px]"><img src="../assets/images/shopping-cart.svg" alt="">В корзину</a>
                </div>
                <div class = "flex py-[24px]">
                <table class = "border-separate border-spacing-y-5" border="1">

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All products</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
 
     <div id="loading" class="fixed w-full h-full z-[4] duration-600">
@@ -14,14 +16,16 @@
 
     <header class="py-[11px] px-[20px] bg-[white] border-b-[3px] border-[#E8E2C8] fixed w-full top-[0] z-[3]">
         <div class="container mx-auto flex justify-between items-center gap-[16px]">
-            <a class="flex gap-[11px]" href="../index.html"><img class="max-w-[39px] w-full h-[32px]" src="../assets/images/logo1.svg"
-                    alt="logo">
+            <a class="flex gap-[11px]" href="../index.html"><img class="max-w-[39px] w-full h-[32px]"
+                    src="../assets/images/logo1.svg" alt="logo">
                 <p class="hidden sm:flex">СЕВЕРЯНОЧКА</p>
             </a>
             <button id="toggle-btn"
-                class="hidden sm:flex gap-[15px] bg-[#70C05B] max-w-[40px] 2xl:max-w-[140px] xl:max-w-[140px] md:max-w-[140px] lg:max-w-[40px] w-full h-[40px] cursor-pointer items-center p-[8px] text-[white] rounded-[8px]"><div class="flex gap-[15px]" ><img
-                    src="../assets/images/menu.svg" alt=""></div>
-                <a href="../pages/catalog.html"><p class="hidden md:flex lg:hidden xl:flex">Каталог</p></a>
+                class="hidden sm:flex gap-[15px] bg-[#70C05B] max-w-[40px] 2xl:max-w-[140px] xl:max-w-[140px] md:max-w-[140px] lg:max-w-[40px] w-full h-[40px] cursor-pointer items-center p-[8px] text-[white] rounded-[8px]">
+                <div class="flex gap-[15px]"><img src="../assets/images/menu.svg" alt=""></div>
+                <a href="../pages/catalog.html">
+                    <p class="hidden md:flex lg:hidden xl:flex">Каталог</p>
+                </a>
             </button>
             <form>
                 <div class="flex">
@@ -34,20 +38,24 @@
                 </div>
             </form>
             <ul class="flex gap-[24px] hidden lg:flex">
-                <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center" href="../pages/favourites.html"><img
-                            src="../assets/images/favourites.svg" alt="">Избранное</a></li>
-                <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center" href="../pages/all_products.html"><img
-                            src="../assets/images/products.svg" alt="">Продукты</a></li>
-                <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center" href="../pages/basket.html"><img
-                           class="w-[24px]" src="../assets/images/Cart2.svg" alt="">Корзина<span id="badge"
-                                class="absolute top-[-10px] right-[7px] bg-[red] rounded-full px-[5px] text-[white] text-[12px]"></span></a></li>
+                <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center"
+                        href="../pages/favourites.html"><img src="../assets/images/favourites.svg" alt="">Избранное</a>
+                </li>
+                <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center"
+                        href="../pages/all_products.html"><img src="../assets/images/products.svg" alt="">Продукты</a>
+                </li>
+                <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center relative"
+                        href="../pages/basket.html"><img class="w-[24px]" src="../assets/images/Cart2.svg"
+                            alt="">Корзина<span id="badge"
+                            class="absolute top-[-10px] right-[7px] bg-[red] rounded-full px-[5px] text-[white] text-[12px]"></span></a>
+                </li>
             </ul>
-            <div class="hidden sm:flex items-center gap-[10px]">
-                <img class="w-[40px] h-[40px]" src="../assets/images/avatar.png" alt="">
-                <h1 class="pr-[15px] hidden lg:flex">Алексей</h1>
+            <div id="profile" class="cursor-pointer hidden sm:flex items-center gap-[10px]">
+                <img id="profile-img" class="w-[40px] h-[40px] rounded-full" src="../assets/images/avatar.png" alt="">
+                <h1 id="profile-name" class="pr-[15px] hidden lg:flex">Алексей</h1>
                 <img src="../assets/images/arrow down.svg" alt="">
             </div>
-    
+
         </div>
     </header>
 
@@ -55,12 +63,12 @@
         class="all-categories hidden duration-600 bg-[white] sm:flex translate-y-[-100%] fixed w-full top-[0] z-[2] pt-[65px] border-b-[3px] border-[#E8E2C8]">
         <ul id="categories"
             class=" px-[20px] sm:grid py-[20px] md:py-[30px] container mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px] md:gap-[20px] lg:gap-[30px]">
-    
+
         </ul>
     </div>
 
     <main>
-       
+
         <section class="bg-[#FBF8EC] px-[20px] pb-[120px] pt-[116px]">
             <div class="container mx-auto">
                 <h1 class="text-[24px] lg:text-[36px] font-[700] pb-[40px]">Все продукты</h1>
@@ -69,15 +77,39 @@
                 </div>
             </div>
         </section>
-        
+
     </main>
+
+    <div id="modal"
+        class="hidden fixed z-[5] top-0 left-0 w-full h-full flex items-center justify-center bg-[#FCD5BACD]">
+        <div id="inner-modal"
+            class="container max-w-[450px] h-[500px] bg-[white] gap-[40px] flex flex-col items-center justify-center">
+            <h1 class="text-[24px] font-bold">Вход</h1>
+            <form id="form-modal" class="flex flex-col items-center gap-[30px] w-full">
+                <input required
+                    class="max-w-[300px] h-[50px] border-[2px] border-[#07d57b] rounded-[5px] w-full px-[15px] "
+                    type="text" placeholder="photo">
+                <input required
+                    class="max-w-[300px] h-[50px] border-[2px] border-[#07d57b] rounded-[5px] w-full px-[15px] "
+                    type="text" placeholder="Введите имя">
+                <input id="profile-tel" required
+                    class="max-w-[300px] h-[50px] border-[2px] border-[#07d57b] rounded-[5px] w-full px-[15px] "
+                    type="tel" placeholder="Номер телефона">
+                <input id="profile-password" required
+                    class="max-w-[300px] h-[50px] border-[2px] border-[#07d57b] rounded-[5px] w-full px-[15px] "
+                    type="password" placeholder="Пароль">
+                <button type="submit"
+                    class="max-w-[300px] h-[50px] font-bold text-[24px] text-[orangered] bg-orange-200 rounded-[5px] w-full px-[15px] cursor-pointer hover:bg-[#FF6633] hover:text-[white] duration-300">Вход</button>
+            </form>
+        </div>
+    </div>
 
     <footer class=" pt-[24px] pb-[58px] bg-[#FBe8c9] px-[20px]">
         <div class="container mx-auto flex justify-between ">
-    
+
             <div class="flex flex-col md:flex-row items-center gap-[20px] block">
                 <div class="flex justify-self-start"><a href=""><img src="../assets/images/logo.svg" alt=""></a></div>
-    
+
                 <div class="flex gap-[20px] flex-wrap">
                     <a class="text-[12px] flex white-space" href="../pages/about_us.html">О компании</a>
                     <a class="text-[12px]" href="../pages/contacts.html">Контакты</a>
@@ -85,9 +117,9 @@
                     <a class="text-[12px]" href="">Статьи</a>
                     <a class="text-[12px]" href="">Политика обработки персональных данных</a>
                 </div>
-    
+
             </div>
-    
+
             <div class="flex flex-col md:flex-row items-center gap-[16px]">
                 <div class="flex md:grid md:grid-cols-2 gap-[20px] lg:flex">
                     <a href=""><img class="max-w-[24px]" src="../assets/images/instagram.svg" alt=""></a>
@@ -95,14 +127,14 @@
                     <a href=""><img class="max-w-[24px]" src="../assets/images/facebook.svg" alt=""></a>
                     <a href=""><img class="max-w-[24px]" src="../assets/images/ok.svg" alt=""></a>
                 </div>
-    
-                <div class="flex items-center pl-[24px] gap-[8px] whitespace-nowrap"><img src="../assets/images/phone.svg"
-                        alt=""><a href="">
+
+                <div class="flex items-center pl-[24px] gap-[8px] whitespace-nowrap"><img
+                        src="../assets/images/phone.svg" alt=""><a href="">
                         <p>8 800 777 33 33</p>
                     </a></div>
             </div>
-    
-    
+
+
         </div>
     </footer>
 
@@ -113,11 +145,13 @@
                 <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center text-[14px]"
                         href="../pages/catalog.html"><img src="../assets/images/Frame 211.svg" alt="">Каталог</a></li>
                 <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center text-[14px]"
-                        href="../pages/favourites.html"><img src="../assets/images/favourites.svg" alt="">Избранное</a></li>
+                        href="../pages/favourites.html"><img src="../assets/images/favourites.svg" alt="">Избранное</a>
+                </li>
                 <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center text-[14px]"
                         href="../pages/basket.html"><img src="../assets/images/shop.svg" alt="">Корзина</a></li>
                 <li class="place-items-center pt-[5px]"><a class="flex flex-col items-center text-[14px]"
-                        href="../pages/all_products.html"><img src="../assets/images/products.svg" alt="">Продукты</a></li>
+                        href="../pages/all_products.html"><img src="../assets/images/products.svg" alt="">Продукты</a>
+                </li>
                 <li class="place-items-center pt-[5px]"><img class="w-[40px] h-[40px]" src="../assets/images/avatar.png"
                         alt="">
                     <h1 class="pr-[15px] hidden lg:flex">Алексей</h1>
@@ -128,13 +162,14 @@
 
     <script src="../js/products-data/products-data.js"></script>
     <script src="../js/categories-data.js"></script>
-    <script src="../js/categories-page.js"></script>
     <script src="../js/category-others.js"></script>
     <script src="../js/products.js"></script>
-    <script src="../js/allproducts.js"></script>
-    <script src="../js/cart.js"></script>
     <script src="../js/search-others.js"></script>
+    <script src="../js/allproducts.js"></script>
+    <script src="../js/profile.js"></script>
+
     <script src="../js/catalog_toggle.js"></script>
 
 </body>
+
 </html>

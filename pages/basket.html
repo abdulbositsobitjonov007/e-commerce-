@@ -53,9 +53,9 @@
                             class="absolute top-[-10px] right-[7px] bg-[red] rounded-full px-[5px] text-[white] text-[12px]"></span></a>
                 </li>
             </ul>
-            <div class="hidden sm:flex items-center gap-[10px]">
-                <img class="w-[40px] h-[40px]" src="../assets/images/avatar.png" alt="">
-                <h1 class="pr-[15px] hidden lg:flex">Алексей</h1>
+            <div id="profile" class="cursor-pointer hidden sm:flex items-center gap-[10px]">
+                <img id="profile-img" class="w-[40px] h-[40px] rounded-full" src="../assets/images/avatar.png" alt="">
+                <h1 id="profile-name" class="pr-[15px] hidden lg:flex">Алексей</h1>
                 <img src="../assets/images/arrow down.svg" alt="">
             </div>
 
@@ -97,88 +97,11 @@
                     </div>
                     <div class="flex justify-center w-[100%] md:w-[25%] ">
                         <div class="flex flex-col max-w-[550px] w-full gap-[30px]">
-                            <div class="flex items-center justify-between">
-                                <div class="switch-wrapper-basic-2">
-                                    <input class="tgl-basic-2 tgl-light-basic-2" id="switch-basic-2" type="checkbox" />
-                                    <label class="tgl-btn-basic-2" for="switch-basic-2"></label>
-                                </div>
-                                <style>
-                                    .switch-wrapper-basic-2 .tgl-basic-2 {
-                                        display: none;
-                                    }
 
-                                    .switch-wrapper-basic-2,
-                                    .switch-wrapper-basic-2 *,
-                                    .switch-wrapper-basic-2 *:after,
-                                    .switch-wrapper-basic-2 *:before {
-                                        box-sizing: border-box;
-                                    }
-
-                                    .switch-wrapper-basic-2 .tgl-basic-2::selection,
-                                    .switch-wrapper-basic-2 .tgl-basic-2:after::selection,
-                                    .switch-wrapper-basic-2 .tgl-basic-2:before::selection,
-                                    .switch-wrapper-basic-2 .tgl-basic-2 *::selection,
-                                    .switch-wrapper-basic-2 .tgl-basic-2 *:after::selection,
-                                    .switch-wrapper-basic-2 .tgl-basic-2 *:before::selection,
-                                    .switch-wrapper-basic-2 .tgl-basic-2+.tgl-btn-basic-2::selection {
-                                        background: none;
-                                    }
-
-                                    .switch-wrapper-basic-2 .tgl-basic-2+.tgl-btn-basic-2 {
-                                        outline: 0;
-                                        display: block;
-                                        width: 64px;
-                                        height: 32px;
-                                        position: relative;
-                                        cursor: pointer;
-                                        user-select: none;
-                                    }
-
-                                    .switch-wrapper-basic-2 .tgl-basic-2+.tgl-btn-basic-2:after,
-                                    .switch-wrapper-basic-2 .tgl-basic-2+.tgl-btn-basic-2:before {
-                                        position: relative;
-                                        display: block;
-                                        content: "";
-                                        width: 50%;
-                                        height: 100%;
-                                    }
-
-                                    .switch-wrapper-basic-2 .tgl-basic-2+.tgl-btn-basic-2:after {
-                                        left: 0;
-                                    }
-
-                                    .switch-wrapper-basic-2 .tgl-basic-2+.tgl-btn-basic-2:before {
-                                        display: none;
-                                    }
-
-                                    .switch-wrapper-basic-2 .tgl-basic-2:checked+.tgl-btn-basic-2:after {
-                                        left: 50%;
-                                    }
-
-                                    .switch-wrapper-basic-2 .tgl-light-basic-2+.tgl-btn-basic-2 {
-                                        background: #c7c6c6;
-                                        border-radius: 32px;
-                                        padding: 2px;
-                                        transition: all 0.4s ease;
-                                    }
-
-                                    .switch-wrapper-basic-2 .tgl-light-basic-2+.tgl-btn-basic-2:after {
-                                        border-radius: 50%;
-                                        background: #fff;
-                                        transition: all 0.2s ease;
-                                    }
-
-                                    .switch-wrapper-basic-2 .tgl-light-basic-2:checked+.tgl-btn-basic-2 {
-                                        background: #07d57b;
-                                    }
-                                </style>
-
-                                <h3 class="whitespace-nowrap">Списать 200 ₽</h3>
-                            </div>
-                            <p>На карте накоплено 200 ₽</p>
                             <hr>
                             <div class="flex justify-between">
-                                <p><span id="badge"></span> товара</p><span class="flex gap-[5px]">
+                                <span id="badge"
+                                    class="absolute top-[-10px] right-[7px] bg-[red] rounded-full px-[5px] text-[white] text-[12px]"></span><p>За товар</p><span class="flex gap-[5px]">
                                     <p class="text-[18px] " id="all-price"></p>₽
                                 </span>
                             </div>
@@ -247,6 +170,27 @@
         </div>
     </footer>
 
+    <div id="modal" class="hidden fixed z-[5] top-0 left-0 w-full h-full flex items-center justify-center bg-[#FCD5BACD]">
+        <div id="inner-modal"
+            class="container max-w-[450px] h-[500px] bg-[white] gap-[40px] flex flex-col items-center justify-center">
+            <h1 class="text-[24px] font-bold">Вход</h1>
+            <form id="form-modal" class="flex flex-col items-center gap-[30px] w-full">
+                <input required class="max-w-[300px] h-[50px] border-[2px] border-[#07d57b] rounded-[5px] w-full px-[15px] "
+                    type="text" placeholder="photo">
+                <input required class="max-w-[300px] h-[50px] border-[2px] border-[#07d57b] rounded-[5px] w-full px-[15px] "
+                    type="text" placeholder="Введите имя">
+                <input id="profile-tel" required
+                    class="max-w-[300px] h-[50px] border-[2px] border-[#07d57b] rounded-[5px] w-full px-[15px] " type="tel"
+                    placeholder="Номер телефона">
+                <input id="profile-password" required
+                    class="max-w-[300px] h-[50px] border-[2px] border-[#07d57b] rounded-[5px] w-full px-[15px] "
+                    type="password" placeholder="Пароль">
+                <button type="submit"
+                    class="max-w-[300px] h-[50px] font-bold text-[24px] text-[orangered] bg-orange-200 rounded-[5px] w-full px-[15px] cursor-pointer hover:bg-[#FF6633] hover:text-[white] duration-300">Вход</button>
+            </form>
+        </div>
+    </div>
+
     <section
         class=" sm:hidden py-[5px] px-[20px] bg-[white] border-t-[3px] border-[#E8E2C8] fixed w-full bottom-[0] z-[2]">
         <div class="container mx-auto">
@@ -275,6 +219,7 @@
     <script src="../js/categories-page.js"></script>
     <script src="../js/category-others.js"></script>
     <script src="../js/products.js"></script>
+    <script src="../js/profile.js"></script>
     <script src="../js/cart.js"></script>
     <script src="../js/catalog_toggle.js"></script>
 </body>

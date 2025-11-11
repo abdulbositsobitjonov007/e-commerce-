@@ -49,9 +49,9 @@
                             src="../assets/images/Cart2.svg" alt="">Корзина<span id="badge"
                                 class="absolute top-[-10px] right-[7px] bg-[red] rounded-full px-[5px] text-[white] text-[12px]"></span></a></li>
             </ul>
-            <div class="hidden sm:flex items-center gap-[10px]">
-                <img class="w-[40px] h-[40px]" src="../assets/images/avatar.png" alt="">
-                <h1 class="pr-[15px] hidden lg:flex">Алексей</h1>
+            <div id="profile" class="cursor-pointer hidden sm:flex items-center gap-[10px]">
+                <img id="profile-img" class="w-[40px] h-[40px] rounded-full" src="../assets/images/avatar.png" alt="">
+                <h1 id="profile-name" class="pr-[15px] hidden lg:flex">Алексей</h1>
                 <img src="../assets/images/arrow down.svg" alt="">
             </div>
 
@@ -82,6 +82,27 @@
             </div>
         </section>
     </main>
+
+    <div id="modal" class="hidden fixed z-[5] top-0 left-0 w-full h-full flex items-center justify-center bg-[#FCD5BACD]">
+        <div id="inner-modal"
+            class="container max-w-[450px] h-[500px] bg-[white] gap-[40px] flex flex-col items-center justify-center">
+            <h1 class="text-[24px] font-bold">Вход</h1>
+            <form id="form-modal" class="flex flex-col items-center gap-[30px] w-full">
+                <input required class="max-w-[300px] h-[50px] border-[2px] border-[#07d57b] rounded-[5px] w-full px-[15px] "
+                    type="text" placeholder="photo">
+                <input required class="max-w-[300px] h-[50px] border-[2px] border-[#07d57b] rounded-[5px] w-full px-[15px] "
+                    type="text" placeholder="Введите имя">
+                <input id="profile-tel" required
+                    class="max-w-[300px] h-[50px] border-[2px] border-[#07d57b] rounded-[5px] w-full px-[15px] " type="tel"
+                    placeholder="Номер телефона">
+                <input id="profile-password" required
+                    class="max-w-[300px] h-[50px] border-[2px] border-[#07d57b] rounded-[5px] w-full px-[15px] "
+                    type="password" placeholder="Пароль">
+                <button type="submit"
+                    class="max-w-[300px] h-[50px] font-bold text-[24px] text-[orangered] bg-orange-200 rounded-[5px] w-full px-[15px] cursor-pointer hover:bg-[#FF6633] hover:text-[white] duration-300">Вход</button>
+            </form>
+        </div>
+    </div>
 
     <footer class=" pt-[24px] pb-[58px] bg-[#FBe8c9] px-[20px]">
         <div class="container mx-auto flex justify-between ">
@@ -121,6 +142,7 @@
     <script src="../js/categories-data.js"></script>
     <script src="../js/products.js"></script>
     <script src="../js/search.js"></script>
+    <script src="../js/profile.js"></script>
     <script src="../js/categories-page.js"></script>
     <script src="../js/catalog_toggle.js"></script>
     <script src="../js/category-others.js"></script>
